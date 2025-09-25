@@ -1,0 +1,72 @@
+/* container ~ Tailwind max-w-7xl & px spacing */
+.custom-container {
+  max-width: 1280px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* amber color like text-amber-800 */
+.text-amber-800 {
+  color: #b45309 !important;
+}
+#el-puadp92j { color: #b45309; } /* brand color */
+
+/* nav links (desktop) spacing like space-x-8 (approx 2rem) */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* nav-link base color + hover */
+.nav-link {
+  color: #374151; /* gray-700 */
+  padding: 0;
+  transition: color .18s ease;
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: #b45309; /* amber-800 */
+  text-decoration: none;
+}
+
+/* height alignment */
+#header .custom-container { height: 64px; }
+
+/* icon button hover color */
+.icon-button svg { stroke: #374151; transition: stroke .18s ease; }
+.icon-button:hover svg { stroke: #b45309; }
+
+/* cart badge */
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #b45309;
+  color: #fff;
+  font-size: 11px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile menu styling */
+#mobile-menu {
+  border-top: 1px solid rgba(0,0,0,0.04);
+}
+#mobile-menu .nav-link {
+  color: #374151;
+  padding: .5rem 1rem;
+}
+
+/* small screens: make nav-links hidden via d-none d-md-flex already, so no extra work */
+/* tweak container padding for large screens if needed */
+@media (min-width: 992px) {
+  .custom-container { padding-left: 2rem; padding-right: 2rem; }
+}
