@@ -1,9 +1,57 @@
+/* Remove the "no-scrollbar" rules */
+/* * {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+*::-webkit-scrollbar {
+  display: none !important;
+} */
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
+
+
+
+
+
 /* container ~ Tailwind max-w-7xl & px spacing */
+
+
 .custom-container {
-  max-width: 1280px;
+  max-width: 900px;
   padding-left: 1rem;
   padding-right: 1rem;
 }
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fraunces', Inter, system-ui, sans-serif;
+}
+
+/* Body text */
+body, p, li, span, a, div {
+    font-family: 'Lato', Inter, system-ui, sans-serif;
+}
+
+
 
 /* amber color like text-amber-800 */
 .text-amber-800 {
@@ -65,8 +113,144 @@
   padding: .5rem 1rem;
 }
 
+.custom-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.custom-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.custom-card:hover img {
+  transform: scale(1.05);
+}
+
+.custom-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+}
+
+.custom-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  color: #fff;
+}
+
+.custom-card-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.custom-card-content p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-bottom: 15px;
+}
+
+.custom-card-content a {
+  display: inline-block;
+  background-color: #92400e;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.custom-card-content a:hover {
+  background-color: #a65c1a;
+}
+
+
+.custom-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  overflow: hidden;
+}
+.custom-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  transform: translateY(-4px);
+}
+.card-img-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 75%; /* 4:3 ratio */
+  overflow: hidden;
+}
+.card-img-wrap img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.card-img-wrap img:hover {
+  transform: scale(1.05);
+}
+.new-badge {
+  background: #fef3c7;
+  color: #b45309;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+}
+.card-desc {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+.price-tag {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #b45309;
+}
+.btn-custom {
+  background-color: #b45309;
+  color: #fff;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 8px;
+  border: none;
+  transition: background 0.2s ease;
+}
+.btn-custom:hover {
+  background-color: #92400e;
+}
+
+
+
 /* small screens: make nav-links hidden via d-none d-md-flex already, so no extra work */
 /* tweak container padding for large screens if needed */
 @media (min-width: 992px) {
-  .custom-container { padding-left: 2rem; padding-right: 2rem; }
+  .custom-container { padding-left: 4rem; padding-right: 4rem; }
+}
+@media (min-width: 1280px) {
+  section {
+  /* padding: 9rem; */
+}
 }
