@@ -1,0 +1,41 @@
+# Node modules (if using npm/yarn for JS packages)
+node_modules/
+
+# Dependency directories
+bower_components/
+
+# Build output
+dist/
+build/
+out/
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE/editor files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Environment files
+.env
+
+# Compiled CSS/JS (if using preprocessors)
+*.css.map
+*.js.map
+
+# Misc
+*.bak
+*.tmp
+
+# Ignore package-lock if not using npm
+package-lock.json
+yarn.lock
+
+# Snapshots
+.snapshot/
