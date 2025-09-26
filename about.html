@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Odejia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow sticky-top">
+      <div
+        class="container d-flex align-items-center justify-content-between"
+        style="height: 64px"
+      >
+        <!-- Brand -->
+        <a
+          href="index.html"
+          class="navbar-brand fw-bold text-brown-primary fs-4 d-flex align-items-center"
+        >
+          <img
+            src="./assets/logo.jpeg.jpg"
+            alt="Odejia Logo"
+            style="height: 40px; width: auto"
+          />
+        </a>
+
+        <!-- Desktop links (lg and up) -->
+        <ul
+          class="nav d-none d-lg-flex align-items-center mb-0"
+          style="gap: 1.5rem"
+        >
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+
+        <!-- Icons + mobile toggler (visible below lg) -->
+        <div class="d-flex align-items-center gap-2">
+          <!-- Search icon -->
+          <button class="btn btn-link p-1 icon-button" aria-label="Search">
+            <svg
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button>
+
+          <!-- Wishlist -->
+          <button class="btn btn-link p-1 icon-button" aria-label="Wishlist">
+            <svg
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+              />
+            </svg>
+          </button>
+
+          <!-- Cart -->
+            <button
+            class="btn btn-link p-1 icon-button position-relative"
+            aria-label="Cart"
+            style="line-height: 1"
+            >
+            <svg
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+              />
+            </svg>
+            <span
+              class="badge cart-badge position-absolute top-0 start-100 translate-middle"
+            >0</span>
+            </button>
+
+          <!-- Mobile toggler (below lg) -->
+          <button
+            class="btn btn-link p-2 d-lg-none"
+            data-bs-toggle="collapse"
+            data-bs-target="#mobile-menu"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <svg
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="collapse d-lg-none bg-white" id="mobile-menu">
+        <ul class="nav flex-column pt-2 pb-3 mb-0">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Categories</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">New Arrivals</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-brown-light">
+        <div class="container">
+            <div class="row align-items-center min-vh-50 py-5">
+                <div class="col-lg-6 order-lg-1 order-2">
+                    <h1 class="display-4 display-md-3 display-lg-2 fw-bold text-brown-primary mb-3">Our Story</h1>
+                    <p class="lead mb-4">For over three decades, Odejia has been crafting exceptional furniture that transforms houses into homes with timeless elegance and unparalleled craftsmanship.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#our-journey" class="btn btn-brown-primary btn-lg px-4">Explore Our Journey</a>
+                        <a href="#craftsmanship" class="btn btn-outline-brown-primary btn-lg px-4">Our Craftsmanship</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0">
+                    <div class="ratio ratio-16x9">
+                        <img src="./assets/1.jpg" alt="Odejia Workshop" class="img-fluid rounded-3 shadow object-fit-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row g-4 g-md-5 text-center">
+                <div class="col-6 col-md-3">
+                    <div class="display-3 fw-bold text-brown-primary">30+</div>
+                    <p class="text-muted mb-0">Years Experience</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="display-3 fw-bold text-brown-primary">10K+</div>
+                    <p class="text-muted mb-0">Happy Customers</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="display-3 fw-bold text-brown-primary">50+</div>
+                    <p class="text-muted mb-0">Awards Won</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="display-3 fw-bold text-brown-primary">100%</div>
+                    <p class="text-muted mb-0">Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Journey Section -->
+    <section id="our-journey" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-brown-primary mb-3">Our Journey</h2>
+                <p class="lead text-muted">From humble beginnings to industry leadership</p>
+            </div>
+
+            <div class="row g-4 g-lg-5">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-img-top ratio ratio-16x9">
+                            <img src="./assets/1.jpg" class="object-fit-cover" alt="1990 Foundation">
+                        </div>
+                        <div class="card-body">
+                            <span class="badge bg-brown-primary mb-2">1990</span>
+                            <h5 class="card-title">Foundation</h5>
+                            <p class="card-text">Founded by master craftsman Rajesh Sharma in a small workshop in Jaipur with a vision for quality furniture.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-img-top ratio ratio-16x9">
+                            <img src="./assets/1.jpg" class="object-fit-cover" alt="1995 Expansion">
+                        </div>
+                        <div class="card-body">
+                            <span class="badge bg-brown-primary mb-2">1995</span>
+                            <h5 class="card-title">First Showroom</h5>
+                            <p class="card-text">Expanded to our first retail showroom in Delhi, introducing contemporary designs alongside traditional pieces.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-img-top ratio ratio-16x9">
+                            <img src="./assets/1.jpg" class="object-fit-cover" alt="2005 International">
+                        </div>
+                        <div class="card-body">
+                            <span class="badge bg-brown-primary mb-2">2005</span>
+                            <h5 class="card-title">Global Reach</h5>
+                            <p class="card-text">Launched international exports to Europe and North America, sharing Indian craftsmanship worldwide.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Craftsmanship Section -->
+    <section id="craftsmanship" class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="ratio ratio-16x9">
+                        <img src="./assets/1.jpg" alt="Craftsmanship Process" class="img-fluid rounded-3 shadow object-fit-cover">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold text-brown-primary mb-4">The Odejia Difference</h2>
+                    <div class="accordion" id="craftsmanshipAccordion">
+                        <div class="accordion-item border-0 mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button bg-brown-light text-brown-primary fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    Wood Selection & Preparation
+                                </button>
+                            </h3>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#craftsmanshipAccordion">
+                                <div class="accordion-body">
+                                    We handpick sustainably sourced hardwoods, allowing them to acclimate naturally before crafting begins.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed bg-brown-light text-brown-primary fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    Traditional Joinery Techniques
+                                </button>
+                            </h3>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#craftsmanshipAccordion">
+                                <div class="accordion-body">
+                                    Using time-honored techniques that create stronger, longer-lasting furniture without relying on modern shortcuts.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed bg-brown-light text-brown-primary fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    Hand Finishing Process
+                                </button>
+                            </h3>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#craftsmanshipAccordion">
+                                <div class="accordion-body">
+                                    Multiple layers of natural finishes applied by hand for depth, character, and lasting protection.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-5 bg-brown-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-brown-primary mb-3">Meet Our Master Craftsmen</h2>
+                <p class="lead text-muted">The passionate artisans behind every Odejia piece</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 text-center">
+                        <div class="card-body p-4">
+                            <div class="mx-auto mb-3" style="width: 120px; height: 120px;">
+                                <img src="./assets/1.jpg" class="rounded-circle w-100 h-100 object-fit-cover" alt="Rajesh Sharma">
+                            </div>
+                            <h5 class="card-title text-brown-primary">Rajesh Sharma</h5>
+                            <p class="text-brown-primary fw-bold mb-2">Founder & Master Craftsman</p>
+                            <p class="card-text">With 40+ years of woodworking experience, Rajesh's vision drives our commitment to quality and tradition.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 text-center">
+                        <div class="card-body p-4">
+                            <div class="mx-auto mb-3" style="width: 120px; height: 120px;">
+                                <img src="./assets/1.jpg" class="rounded-circle w-100 h-100 object-fit-cover" alt="Priya Verma">
+                            </div>
+                            <h5 class="card-title text-brown-primary">Priya Verma</h5>
+                            <p class="text-brown-primary fw-bold mb-2">Head Designer</p>
+                            <p class="card-text">Priya combines traditional techniques with contemporary aesthetics to create timeless, functional pieces.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 text-center">
+                        <div class="card-body p-4">
+                            <div class="mx-auto mb-3" style="width: 120px; height: 120px;">
+                                <img src="./assets/1.jpg" class="rounded-circle w-100 h-100 object-fit-cover" alt="Amit Patel">
+                            </div>
+                            <h5 class="card-title text-brown-primary">Amit Patel</h5>
+                            <p class="text-brown-primary fw-bold mb-2">Production Manager</p>
+                            <p class="card-text">Amit ensures every piece meets our rigorous quality standards before it reaches your home.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonials Section -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold text-brown-primary mb-3">What Our Customers Say</h2>
+      <p class="lead text-muted">Hear from those who have experienced the Odejia difference</p>
+    </div>
+
+    <!-- Horizontal Testimonial Slider -->
+    <div class="testimonial-grid-slider position-relative overflow-hidden">
+      <div class="testimonial-grid-track d-flex" id="testimonialGridTrack">
+        <!-- Repeat testimonial-grid-item as needed -->
+        <div class="testimonial-grid-item">
+          <div class="testimonial-card h-100">
+            <div class="testimonial-icon mb-3">
+              <i class="fas fa-quote-left text-brown-primary"></i>
+            </div>
+            <p class="testimonial-text mb-4">
+              "The dining table we purchased from Odejia has become the heart of our home. The craftsmanship is exceptional and the wood quality is outstanding."
+            </p>
+            <div class="testimonial-author">
+              <img src="./assets/1.jpg" alt="Anita Desai" class="rounded-circle mb-2">
+              <h5 class="text-brown-primary mb-1">Anita Desai</h5>
+              <p class="text-muted small">Mumbai</p>
+              <div class="rating text-warning">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-grid-item">
+          <div class="testimonial-card h-100">
+            <div class="testimonial-icon mb-3">
+              <i class="fas fa-quote-left text-brown-primary"></i>
+            </div>
+            <p class="testimonial-text mb-4">
+              "The dining table we purchased from Odejia has become the heart of our home. The craftsmanship is exceptional and the wood quality is outstanding."
+            </p>
+            <div class="testimonial-author">
+              <img src="./assets/1.jpg" alt="Anita Desai" class="rounded-circle mb-2">
+              <h5 class="text-brown-primary mb-1">Anita Desai</h5>
+              <p class="text-muted small">Mumbai</p>
+              <div class="rating text-warning">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-grid-item">
+          <div class="testimonial-card h-100">
+            <div class="testimonial-icon mb-3">
+              <i class="fas fa-quote-left text-brown-primary"></i>
+            </div>
+            <p class="testimonial-text mb-4">
+              "The dining table we purchased from Odejia has become the heart of our home. The craftsmanship is exceptional and the wood quality is outstanding."
+            </p>
+            <div class="testimonial-author">
+              <img src="./assets/1.jpg" alt="Anita Desai" class="rounded-circle mb-2">
+              <h5 class="text-brown-primary mb-1">Anita Desai</h5>
+              <p class="text-muted small">Mumbai</p>
+              <div class="rating text-warning">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-grid-item">
+          <div class="testimonial-card h-100">
+            <div class="testimonial-icon mb-3">
+              <i class="fas fa-quote-left text-brown-primary"></i>
+            </div>
+            <p class="testimonial-text mb-4">
+              "The dining table we purchased from Odejia has become the heart of our home. The craftsmanship is exceptional and the wood quality is outstanding."
+            </p>
+            <div class="testimonial-author">
+              <img src="./assets/1.jpg" alt="Anita Desai" class="rounded-circle mb-2">
+              <h5 class="text-brown-primary mb-1">Anita Desai</h5>
+              <p class="text-muted small">Mumbai</p>
+              <div class="rating text-warning">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-grid-item">
+          <div class="testimonial-card h-100">
+            <div class="testimonial-icon mb-3">
+              <i class="fas fa-quote-left text-brown-primary"></i>
+            </div>
+            <p class="testimonial-text mb-4">
+              "The dining table we purchased from Odejia has become the heart of our home. The craftsmanship is exceptional and the wood quality is outstanding."
+            </p>
+            <div class="testimonial-author">
+              <img src="./assets/1.jpg" alt="Anita Desai" class="rounded-circle mb-2">
+              <h5 class="text-brown-primary mb-1">Anita Desai</h5>
+              <p class="text-muted small">Mumbai</p>
+              <div class="rating text-warning">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-grid-item">
+          <div class="testimonial-card h-100">
+            <div class="testimonial-icon mb-3">
+              <i class="fas fa-quote-left text-brown-primary"></i>
+            </div>
+            <p class="testimonial-text mb-4">
+              "The dining table we purchased from Odejia has become the heart of our home. The craftsmanship is exceptional and the wood quality is outstanding."
+            </p>
+            <div class="testimonial-author">
+              <img src="./assets/1.jpg" alt="Anita Desai" class="rounded-circle mb-2">
+              <h5 class="text-brown-primary mb-1">Anita Desai</h5>
+              <p class="text-muted small">Mumbai</p>
+              <div class="rating text-warning">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-grid-item">
+          <div class="testimonial-card h-100">
+            <div class="testimonial-icon mb-3">
+              <i class="fas fa-quote-left text-brown-primary"></i>
+            </div>
+            <p class="testimonial-text mb-4">
+              "The dining table we purchased from Odejia has become the heart of our home. The craftsmanship is exceptional and the wood quality is outstanding."
+            </p>
+            <div class="testimonial-author">
+              <img src="./assets/1.jpg" alt="Anita Desai" class="rounded-circle mb-2">
+              <h5 class="text-brown-primary mb-1">Anita Desai</h5>
+              <p class="text-muted small">Mumbai</p>
+              <div class="rating text-warning">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-grid-item">
+          <div class="testimonial-card h-100">
+            <div class="testimonial-icon mb-3">
+              <i class="fas fa-quote-left text-brown-primary"></i>
+            </div>
+            <p class="testimonial-text mb-4">
+              "The dining table we purchased from Odejia has become the heart of our home. The craftsmanship is exceptional and the wood quality is outstanding."
+            </p>
+            <div class="testimonial-author">
+              <img src="./assets/1.jpg" alt="Anita Desai" class="rounded-circle mb-2">
+              <h5 class="text-brown-primary mb-1">Anita Desai</h5>
+              <p class="text-muted small">Mumbai</p>
+              <div class="rating text-warning">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more .testimonial-grid-item blocks here -->
+      </div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="text-center mt-4">
+      <div class="scroll-progress">
+        <div class="progress" style="height: 4px; max-width: 200px; margin: 0 auto;">
+          <div class="progress-bar bg-brown-primary" id="scrollProgress" style="width: 0%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- CTA Section -->
+    <!-- <section class="py-5 bg-brown-primary text-white">
+        <div class="container">
+            <div class="row align-items-center text-center text-lg-start">
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <h2 class="mb-3">Experience Odejia Craftsmanship</h2>
+                    <p class="mb-0 lead">Visit our showroom or schedule a consultation with our design experts.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-end">
+                        <a href="#" class="btn btn-light btn-lg px-4">Book Consultation</a>
+                        <a href="#" class="btn btn-outline-light btn-lg px-4">View Gallery</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="text-brown-primary mb-3">Odejia</h5>
+                    <p class="text-white-50">Premium handcrafted wooden furniture and home decor. Bringing tradition and modern design together.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h5 class="text-brown-primary mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-white-50 text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Gallery</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h5 class="text-brown-primary mb-3">Contact Us</h5>
+                    <p class="text-white-50 mb-1">📍 123, Heritage Street, Jaipur, India</p>
+                    <p class="text-white-50 mb-1">📞 +91 98765 43210</p>
+                    <p class="text-white-50 mb-3">✉️ info@odejia.com</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white-50"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white-50"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white-50"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-light my-4">
+
+            <div class="text-center pt-2">
+                <p class="text-white-50 mb-0">&copy; 2025 Odejia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+</body>
+</html>

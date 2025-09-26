@@ -18,3 +18,35 @@
     });
   });
 })();
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const gridTrack = document.getElementById('testimonialGridTrack');
+  const progressBar = document.getElementById('scrollProgress');
+  if (!gridTrack || !progressBar) return;
+
+  let progress = 0;
+  const animationDuration = 40000; // 40 seconds
+
+  function updateProgress() {
+    progress = (progress + 2.5) % 100;
+    progressBar.style.width = progress + '%';
+  }
+
+  setInterval(updateProgress, 1000);
+
+  gridTrack.addEventListener('animationiteration', () => {
+    progress = 0;
+    progressBar.style.width = '0%';
+  });
+
+  const sliderContainer = gridTrack.closest('.testimonial-grid-slider');
+  sliderContainer.addEventListener('mouseenter', () => {
+    gridTrack.style.animationPlayState = 'paused';
+  });
+  sliderContainer.addEventListener('mouseleave', () => {
+    gridTrack.style.animationPlayState = 'running';
+  });
+});
+</script>
