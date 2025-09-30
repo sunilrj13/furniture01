@@ -286,6 +286,7 @@ body, p, li, span, a, div {
 }
 @media (min-width: 576px) {
   .product-card { width: 48%; }
+  .btn-custom { padding: 8px 20px; }
 }
 @media (min-width: 768px) {
   .product-card { width: 48%; }

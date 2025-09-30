@@ -1,0 +1,143 @@
+      .main-image {
+        cursor: zoom-in;
+        transition: transform 0.3s ease;
+      }
+      .main-image.zoomed {
+        cursor: zoom-out;
+        transform: scale(1.5);
+        z-index: 1000;
+        position: relative;
+      }
+      .product-scroll-track {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+      .product-scroll-track::-webkit-scrollbar {
+        display: none;
+      }
+      /* Related Products Section Styles */
+.related-card {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--border-light);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.related-card:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transform: translateY(-4px);
+}
+
+.related-img-container {
+  position: relative;
+  width: 100%;
+  padding-top: 75%; /* 4:3 aspect ratio */
+  overflow: hidden;
+  background: var(--light-bg);
+}
+
+.related-card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.related-card:hover .related-card-image {
+  transform: scale(1.05);
+}
+
+.related-card-body {
+  padding: 1.5rem;
+  flex-grow: 1;
+}
+
+.related-card-footer {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.related-card-link {
+  color: inherit;
+  display: block;
+  flex-grow: 1;
+}
+
+.related-card-link:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.related-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.related-card-text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+.related-badge {
+  background: var(--primary-brown-bg);
+  color: var(--primary-brown);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+}
+
+.related-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-brown);
+}
+
+.related-cart-btn {
+  background: var(--primary-brown);
+  color: var(--white);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.related-cart-btn:hover {
+  background: var(--primary-brown-dark);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .related-card-body {
+    padding: 1rem;
+  }
+  
+  .related-card-footer {
+    padding: 0 1rem 1rem;
+  }
+  
+  .related-card-title {
+    font-size: 1rem;
+  }
+  
+  .related-card-text {
+    font-size: 0.85rem;
+  }
+  
+  .related-cart-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}

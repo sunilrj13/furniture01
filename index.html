@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Inside your <head> tag -->
+    <link rel="icon" href="./assets/logo.jpeg.jpg" type="image/x-icon" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Odejia</title>
@@ -20,6 +22,7 @@
     />
 
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/stylesheet/categories.css" />
   </head>
   <body class="body">
     <nav class="bg-white shadow sticky-top">
@@ -48,13 +51,17 @@
             <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Categories</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categories</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="about.html">About Us</a>
           </li>
           <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
         </ul>
 
         <!-- Icons + mobile toggler (visible below lg) -->
@@ -151,16 +158,24 @@
       <!-- Mobile menu -->
       <div class="collapse d-lg-none bg-white" id="mobile-menu">
         <ul class="nav flex-column pt-2 pb-3 mb-0">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
           <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Categories</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categories</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="#">New Arrivals</a>
           </li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
           <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -229,75 +244,253 @@
 
         <div class="row g-4">
           <!-- Card Start -->
-          <div class="col-md-4">
-            <div class="custom-card">
-              <img src="./assets/1.jpg" alt="Luxury Wood Furniture" />
-              <div class="custom-card-overlay"></div>
-              <div class="custom-card-content">
-                <h3>Living Room</h3>
-                <p>
-                  Premium wooden sofas, coffee tables, and storage solutions
-                </p>
-                <a href="">Explore Collection</a>
+          <div class="col-md-6 col-lg-4">
+            <a href="living-room.html" class="text-decoration-none">
+              <div
+                class="category-card position-relative overflow-hidden rounded-4 shadow-sm"
+              >
+                <div class="ratio ratio-4x3">
+                  <img
+                    src="./assets/1.jpg"
+                    class="category-img object-fit-cover"
+                    alt="Living Room"
+                  />
+                </div>
+                <div
+                  class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end p-4"
+                >
+                  <div class="text-white">
+                    <h3 class="category-title fw-bold mb-2">Living Room</h3>
+                    <p class="category-desc mb-3">
+                      Sofas, coffee tables, entertainment units
+                    </p>
+                    <span class="category-count badge bg-brown-primary"
+                      >42 Products</span
+                    >
+                  </div>
+                </div>
+                <div class="category-badge position-absolute top-0 end-0 m-4">
+                  <span class="badge bg-white text-brown-primary px-3 py-2"
+                    >Popular</span
+                  >
+                </div>
+                <div
+                  class="category-hover-effect position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                >
+                  <div class="text-white text-center">
+                    <i class="fas fa-arrow-right fa-2x mb-2"></i>
+                    <p class="mb-0 fw-semibold">Explore Collection</p>
+                  </div>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
           <!-- Repeat for other cards -->
-          <div class="col-md-4">
-            <div class="custom-card">
-              <img src="./assets/1.jpg" alt="Bedroom Furniture" />
-              <div class="custom-card-overlay"></div>
-              <div class="custom-card-content">
-                <h3>Bedroom</h3>
-                <p>Elegant beds, wardrobes, and bedside tables</p>
-                <a href="#">Explore Collection</a>
+          <div class="col-md-6 col-lg-4">
+            <a href="living-room.html" class="text-decoration-none">
+              <div
+                class="category-card position-relative overflow-hidden rounded-4 shadow-sm"
+              >
+                <div class="ratio ratio-4x3">
+                  <img
+                    src="./assets/1.jpg"
+                    class="category-img object-fit-cover"
+                    alt="Living Room"
+                  />
+                </div>
+                <div
+                  class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end p-4"
+                >
+                  <div class="text-white">
+                    <h3 class="category-title fw-bold mb-2">Living Room</h3>
+                    <p class="category-desc mb-3">
+                      Sofas, coffee tables, entertainment units
+                    </p>
+                    <span class="category-count badge bg-brown-primary"
+                      >42 Products</span
+                    >
+                  </div>
+                </div>
+                <div class="category-badge position-absolute top-0 end-0 m-4">
+                  <span class="badge bg-white text-brown-primary px-3 py-2"
+                    >Popular</span
+                  >
+                </div>
+                <div
+                  class="category-hover-effect position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                >
+                  <div class="text-white text-center">
+                    <i class="fas fa-arrow-right fa-2x mb-2"></i>
+                    <p class="mb-0 fw-semibold">Explore Collection</p>
+                  </div>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
 
-          <div class="col-md-4">
-            <div class="custom-card">
-              <img src="./assets/1.jpg" alt="Dining Room" />
-              <div class="custom-card-overlay"></div>
-              <div class="custom-card-content">
-                <h3>Dining Room</h3>
-                <p>Solid wood dining tables, chairs, and sideboards</p>
-                <a href="#">Explore Collection</a>
+          <div class="col-md-6 col-lg-4">
+            <a href="living-room.html" class="text-decoration-none">
+              <div
+                class="category-card position-relative overflow-hidden rounded-4 shadow-sm"
+              >
+                <div class="ratio ratio-4x3">
+                  <img
+                    src="./assets/1.jpg"
+                    class="category-img object-fit-cover"
+                    alt="Living Room"
+                  />
+                </div>
+                <div
+                  class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end p-4"
+                >
+                  <div class="text-white">
+                    <h3 class="category-title fw-bold mb-2">Living Room</h3>
+                    <p class="category-desc mb-3">
+                      Sofas, coffee tables, entertainment units
+                    </p>
+                    <span class="category-count badge bg-brown-primary"
+                      >42 Products</span
+                    >
+                  </div>
+                </div>
+                <div class="category-badge position-absolute top-0 end-0 m-4">
+                  <span class="badge bg-white text-brown-primary px-3 py-2"
+                    >Popular</span
+                  >
+                </div>
+                <div
+                  class="category-hover-effect position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                >
+                  <div class="text-white text-center">
+                    <i class="fas fa-arrow-right fa-2x mb-2"></i>
+                    <p class="mb-0 fw-semibold">Explore Collection</p>
+                  </div>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
-          <div class="col-md-4">
-            <div class="custom-card">
-              <img src="./assets/1.jpg" alt="Office Furniture" />
-              <div class="custom-card-overlay"></div>
-              <div class="custom-card-content">
-                <h3>Office</h3>
-                <p>Professional desks, chairs, and storage solutions</p>
-                <a href="#">Explore Collection</a>
+          <div class="col-md-6 col-lg-4">
+            <a href="living-room.html" class="text-decoration-none">
+              <div
+                class="category-card position-relative overflow-hidden rounded-4 shadow-sm"
+              >
+                <div class="ratio ratio-4x3">
+                  <img
+                    src="./assets/1.jpg"
+                    class="category-img object-fit-cover"
+                    alt="Living Room"
+                  />
+                </div>
+                <div
+                  class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end p-4"
+                >
+                  <div class="text-white">
+                    <h3 class="category-title fw-bold mb-2">Living Room</h3>
+                    <p class="category-desc mb-3">
+                      Sofas, coffee tables, entertainment units
+                    </p>
+                    <span class="category-count badge bg-brown-primary"
+                      >42 Products</span
+                    >
+                  </div>
+                </div>
+                <div class="category-badge position-absolute top-0 end-0 m-4">
+                  <span class="badge bg-white text-brown-primary px-3 py-2"
+                    >Popular</span
+                  >
+                </div>
+                <div
+                  class="category-hover-effect position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                >
+                  <div class="text-white text-center">
+                    <i class="fas fa-arrow-right fa-2x mb-2"></i>
+                    <p class="mb-0 fw-semibold">Explore Collection</p>
+                  </div>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
-          <div class="col-md-4">
-            <div class="custom-card">
-              <img src="./assets/1.jpg" alt="Outdoor Furniture" />
-              <div class="custom-card-overlay"></div>
-              <div class="custom-card-content">
-                <h3>Outdoor</h3>
-                <p>Weather-resistant furniture for your outdoor spaces</p>
-                <a href="#">Explore Collection</a>
+          <div class="col-md-6 col-lg-4">
+            <a href="living-room.html" class="text-decoration-none">
+              <div
+                class="category-card position-relative overflow-hidden rounded-4 shadow-sm"
+              >
+                <div class="ratio ratio-4x3">
+                  <img
+                    src="./assets/1.jpg"
+                    class="category-img object-fit-cover"
+                    alt="Living Room"
+                  />
+                </div>
+                <div
+                  class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end p-4"
+                >
+                  <div class="text-white">
+                    <h3 class="category-title fw-bold mb-2">Living Room</h3>
+                    <p class="category-desc mb-3">
+                      Sofas, coffee tables, entertainment units
+                    </p>
+                    <span class="category-count badge bg-brown-primary"
+                      >42 Products</span
+                    >
+                  </div>
+                </div>
+                <div class="category-badge position-absolute top-0 end-0 m-4">
+                  <span class="badge bg-white text-brown-primary px-3 py-2"
+                    >Popular</span
+                  >
+                </div>
+                <div
+                  class="category-hover-effect position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                >
+                  <div class="text-white text-center">
+                    <i class="fas fa-arrow-right fa-2x mb-2"></i>
+                    <p class="mb-0 fw-semibold">Explore Collection</p>
+                  </div>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
-          <div class="col-md-4">
-            <div class="custom-card">
-              <img src="./assets/1.jpg" alt="Home Accessories" />
-              <div class="custom-card-overlay"></div>
-              <div class="custom-card-content">
-                <h3>Accessories</h3>
-                <p>Decorative items to complement your furniture</p>
-                <a href="#">Explore Collection</a>
+          <div class="col-md-6 col-lg-4">
+            <a href="living-room.html" class="text-decoration-none">
+              <div
+                class="category-card position-relative overflow-hidden rounded-4 shadow-sm"
+              >
+                <div class="ratio ratio-4x3">
+                  <img
+                    src="./assets/1.jpg"
+                    class="category-img object-fit-cover"
+                    alt="Living Room"
+                  />
+                </div>
+                <div
+                  class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end p-4"
+                >
+                  <div class="text-white">
+                    <h3 class="category-title fw-bold mb-2">Living Room</h3>
+                    <p class="category-desc mb-3">
+                      Sofas, coffee tables, entertainment units
+                    </p>
+                    <span class="category-count badge bg-brown-primary"
+                      >42 Products</span
+                    >
+                  </div>
+                </div>
+                <div class="category-badge position-absolute top-0 end-0 m-4">
+                  <span class="badge bg-white text-brown-primary px-3 py-2"
+                    >Popular</span
+                  >
+                </div>
+                <div
+                  class="category-hover-effect position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                >
+                  <div class="text-white text-center">
+                    <i class="fas fa-arrow-right fa-2x mb-2"></i>
+                    <p class="mb-0 fw-semibold">Explore Collection</p>
+                  </div>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -308,126 +501,156 @@
       <div class="container">
         <!-- Section Heading -->
         <div class="text-center mb-5">
-          <h2 class="fw-bold mb-3">Popular Products</h2>
+          <h2 class="fw-bold mb-3 text-brown-primary">Popular Products</h2>
           <p class="text-muted">Best sellers crafted with passion</p>
         </div>
 
-        <!-- Scrollable Product Cards -->
-        <div class="product-scroll-wrapper">
-          <div class="product-scroll-track">
-            <!-- Product Card 1 -->
-            <div class="product-card">
-              <div class="custom-product-card h-100">
-                <div class="card-img-wrap">
-                  <img
-                    src="./assets/1.jpg"
-                    alt="Modern Coffee Table"
-                    class="card-img-top"
-                  />
-                </div>
-                <div class="p-4">
-                  <div
-                    class="d-flex justify-content-between align-items-center mb-2"
+        <!-- Scrollable Product Cards with Buttons -->
+        <div class="position-relative">
+          <!-- Scrollable Track -->
+          <div class="product-scroll-wrapper">
+            <div class="product-scroll-track" id="productScrollTrack">
+              <!-- Product Card 1 -->
+              <div class="product-card">
+                <div class="custom-product-card h-100">
+                  <a
+                    href="product-details.html"
+                    class="card-link text-decoration-none"
                   >
-                    <span class="badge trending-badge">Trending</span>
-                  </div>
-                  <h3 class="card-title mb-2">Modern Coffee Table</h3>
-                  <p class="card-desc mb-4">Contemporary design with storage</p>
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <span class="price-tag">$849</span>
-                    <button class="btn-custom">Add to Cart</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Product Card 2 -->
-            <div class="product-card">
-              <div class="custom-product-card h-100">
-                <div class="card-img-wrap">
-                  <img
-                    src="./assets/1.jpg"
-                    alt="Luxury Sofa"
-                    class="card-img-top"
-                  />
-                </div>
-                <div class="p-4">
-                  <div
-                    class="d-flex justify-content-between align-items-center mb-2"
-                  >
-                    <span class="badge trending-badge">Trending</span>
-                  </div>
-                  <h3 class="card-title mb-2">Luxury Sofa</h3>
-                  <p class="card-desc mb-4">
-                    Elegant comfort for your living room
-                  </p>
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <span class="price-tag">$1,299</span>
-                    <button class="btn-custom">Add to Cart</button>
+                    <div class="card-img-wrap">
+                      <img
+                        src="./assets/1.jpg"
+                        alt="Modern Coffee Table"
+                        class="card-img-top"
+                      />
+                    </div>
+                    <div class="p-4">
+                      <div
+                        class="d-flex justify-content-between align-items-center mb-2"
+                      >
+                        <span class="badge trending-badge">Trending</span>
+                      </div>
+                      <h3 class="card-title mb-2">Modern Coffee Table</h3>
+                      <p class="card-desc mb-4">
+                        Contemporary design with storage
+                      </p>
+                    </div>
+                  </a>
+                  <div class="p-4 pt-0">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="price-tag">$849</span>
+                      <button class="btn-custom">Add to Cart</button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <!-- Product Card 3 -->
-            <div class="product-card">
-              <div class="custom-product-card h-100">
-                <div class="card-img-wrap">
-                  <img
-                    src="./assets/1.jpg"
-                    alt="Wooden Chair"
-                    class="card-img-top"
-                  />
-                </div>
-                <div class="p-4">
-                  <div
-                    class="d-flex justify-content-between align-items-center mb-2"
+              <!-- Product Card 2 -->
+              <div class="product-card">
+                <div class="custom-product-card h-100">
+                  <a
+                    href="productDetails.html"
+                    class="card-link text-decoration-none"
                   >
-                    <span class="badge trending-badge">Trending</span>
-                  </div>
-                  <h3 class="card-title mb-2">Classic Wooden Chair</h3>
-                  <p class="card-desc mb-4">
-                    Premium handcrafted wooden design
-                  </p>
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <span class="price-tag">$499</span>
-                    <button class="btn-custom">Add to Cart</button>
+                    <div class="card-img-wrap">
+                      <img
+                        src="./assets/1.jpg"
+                        alt="Luxury Sofa"
+                        class="card-img-top"
+                      />
+                    </div>
+                    <div class="p-4">
+                      <div
+                        class="d-flex justify-content-between align-items-center mb-2"
+                      >
+                        <span class="badge trending-badge">Trending</span>
+                      </div>
+                      <h3 class="card-title mb-2">Luxury Sofa</h3>
+                      <p class="card-desc mb-4">
+                        Elegant comfort for your living room
+                      </p>
+                    </div>
+                  </a>
+                  <div class="p-4 pt-0">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="price-tag">$1,299</span>
+                      <button class="btn-custom">Add to Cart</button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <!-- Product Card 4 -->
-            <div class="product-card">
-              <div class="custom-product-card h-100">
-                <div class="card-img-wrap">
-                  <img
-                    src="./assets/1.jpg"
-                    alt="Elegant Bookshelf"
-                    class="card-img-top"
-                  />
-                </div>
-                <div class="p-4">
-                  <div
-                    class="d-flex justify-content-between align-items-center mb-2"
+              <!-- Product Card 3 -->
+              <div class="product-card">
+                <div class="custom-product-card h-100">
+                  <a
+                    href="productDetails.html"
+                    class="card-link text-decoration-none"
                   >
-                    <span class="badge trending-badge">Trending</span>
+                    <div class="card-img-wrap">
+                      <img
+                        src="./assets/1.jpg"
+                        alt="Classic Wooden Chair"
+                        class="card-img-top"
+                      />
+                    </div>
+                    <div class="p-4">
+                      <div
+                        class="d-flex justify-content-between align-items-center mb-2"
+                      >
+                        <span class="badge trending-badge">Trending</span>
+                      </div>
+                      <h3 class="card-title mb-2">Classic Wooden Chair</h3>
+                      <p class="card-desc mb-4">
+                        Premium handcrafted wooden design
+                      </p>
+                    </div>
+                  </a>
+                  <div class="p-4 pt-0">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="price-tag">$499</span>
+                      <button class="btn-custom">Add to Cart</button>
+                    </div>
                   </div>
-                  <h3 class="card-title mb-2">Elegant Bookshelf</h3>
-                  <p class="card-desc mb-4">
-                    Stylish storage for your favorite reads
-                  </p>
-                  <div
-                    class="d-flex justify-content-between align-items-center"
+                </div>
+              </div>
+              <!-- Product Card 4 -->
+              <div class="product-card">
+                <div class="custom-product-card h-100">
+                  <a
+                    href="productDetails.html"
+                    class="card-link text-decoration-none"
                   >
-                    <span class="price-tag">$699</span>
-                    <button class="btn-custom">Add to Cart</button>
+                    <div class="card-img-wrap">
+                      <img
+                        src="./assets/1.jpg"
+                        alt="Elegant Bookshelf"
+                        class="card-img-top"
+                      />
+                    </div>
+                    <div class="p-4">
+                      <div
+                        class="d-flex justify-content-between align-items-center mb-2"
+                      >
+                        <span class="badge trending-badge">Trending</span>
+                      </div>
+                      <h3 class="card-title mb-2">Elegant Bookshelf</h3>
+                      <p class="card-desc mb-4">
+                        Stylish storage for your favorite reads
+                      </p>
+                    </div>
+                  </a>
+                  <div class="p-4 pt-0">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="price-tag">$699</span>
+                      <button class="btn-custom">Add to Cart</button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -436,11 +659,12 @@
         </div>
 
         <!-- View All Button -->
-        <!-- <div class="text-center mt-5">
-      <a href="#" class="btn btn-primary-brown btn-lg">View All Products</a>
-    </div> -->
+        <div class="text-center mt-5">
+          <a href="#" class="btn btn-primary-brown btn-lg">View All Products</a>
+        </div>
       </div>
     </section>
+
     <section id="new-arrivals" class="py-5 bg-white">
       <div class="container">
         <!-- Section Heading -->
@@ -455,21 +679,30 @@
             <!-- Product Card 1 -->
             <div class="product-card">
               <div class="custom-product-card h-100">
-                <div class="card-img-wrap">
-                  <img
-                    src="./assets/1.jpg"
-                    alt="Modern Coffee Table"
-                    class="card-img-top"
-                  />
-                </div>
-                <div class="p-4">
-                  <div
-                    class="d-flex justify-content-between align-items-center mb-2"
-                  >
-                    <span class="badge trending-badge">Trending</span>
+                <a
+                  href="productDetails.html"
+                  class="card-link text-decoration-none"
+                >
+                  <div class="card-img-wrap">
+                    <img
+                      src="./assets/1.jpg"
+                      alt="Modern Coffee Table"
+                      class="card-img-top"
+                    />
                   </div>
-                  <h3 class="card-title mb-2">Modern Coffee Table</h3>
-                  <p class="card-desc mb-4">Contemporary design with storage</p>
+                  <div class="p-4">
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-2"
+                    >
+                      <span class="badge trending-badge">Trending</span>
+                    </div>
+                    <h3 class="card-title mb-2">Modern Coffee Table</h3>
+                    <p class="card-desc mb-4">
+                      Contemporary design with storage
+                    </p>
+                  </div>
+                </a>
+                <div class="p-4 pt-0">
                   <div
                     class="d-flex justify-content-between align-items-center"
                   >
@@ -479,27 +712,33 @@
                 </div>
               </div>
             </div>
-
             <!-- Product Card 2 -->
             <div class="product-card">
               <div class="custom-product-card h-100">
-                <div class="card-img-wrap">
-                  <img
-                    src="./assets/1.jpg"
-                    alt="Luxury Sofa"
-                    class="card-img-top"
-                  />
-                </div>
-                <div class="p-4">
-                  <div
-                    class="d-flex justify-content-between align-items-center mb-2"
-                  >
-                    <span class="badge trending-badge">Trending</span>
+                <a
+                  href="productDetails.html"
+                  class="card-link text-decoration-none"
+                >
+                  <div class="card-img-wrap">
+                    <img
+                      src="./assets/1.jpg"
+                      alt="Luxury Sofa"
+                      class="card-img-top"
+                    />
                   </div>
-                  <h3 class="card-title mb-2">Luxury Sofa</h3>
-                  <p class="card-desc mb-4">
-                    Elegant comfort for your living room
-                  </p>
+                  <div class="p-4">
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-2"
+                    >
+                      <span class="badge trending-badge">Trending</span>
+                    </div>
+                    <h3 class="card-title mb-2">Luxury Sofa</h3>
+                    <p class="card-desc mb-4">
+                      Elegant comfort for your living room
+                    </p>
+                  </div>
+                </a>
+                <div class="p-4 pt-0">
                   <div
                     class="d-flex justify-content-between align-items-center"
                   >
@@ -509,27 +748,33 @@
                 </div>
               </div>
             </div>
-
             <!-- Product Card 3 -->
             <div class="product-card">
               <div class="custom-product-card h-100">
-                <div class="card-img-wrap">
-                  <img
-                    src="./assets/1.jpg"
-                    alt="Wooden Chair"
-                    class="card-img-top"
-                  />
-                </div>
-                <div class="p-4">
-                  <div
-                    class="d-flex justify-content-between align-items-center mb-2"
-                  >
-                    <span class="badge trending-badge">Trending</span>
+                <a
+                  href="productDetails.html"
+                  class="card-link text-decoration-none"
+                >
+                  <div class="card-img-wrap">
+                    <img
+                      src="./assets/1.jpg"
+                      alt="Classic Wooden Chair"
+                      class="card-img-top"
+                    />
                   </div>
-                  <h3 class="card-title mb-2">Classic Wooden Chair</h3>
-                  <p class="card-desc mb-4">
-                    Premium handcrafted wooden design
-                  </p>
+                  <div class="p-4">
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-2"
+                    >
+                      <span class="badge trending-badge">Trending</span>
+                    </div>
+                    <h3 class="card-title mb-2">Classic Wooden Chair</h3>
+                    <p class="card-desc mb-4">
+                      Premium handcrafted wooden design
+                    </p>
+                  </div>
+                </a>
+                <div class="p-4 pt-0">
                   <div
                     class="d-flex justify-content-between align-items-center"
                   >
@@ -539,27 +784,33 @@
                 </div>
               </div>
             </div>
-
             <!-- Product Card 4 -->
             <div class="product-card">
               <div class="custom-product-card h-100">
-                <div class="card-img-wrap">
-                  <img
-                    src="./assets/1.jpg"
-                    alt="Elegant Bookshelf"
-                    class="card-img-top"
-                  />
-                </div>
-                <div class="p-4">
-                  <div
-                    class="d-flex justify-content-between align-items-center mb-2"
-                  >
-                    <span class="badge trending-badge">Trending</span>
+                <a
+                  href="productDetails.html"
+                  class="card-link text-decoration-none"
+                >
+                  <div class="card-img-wrap">
+                    <img
+                      src="./assets/1.jpg"
+                      alt="Elegant Bookshelf"
+                      class="card-img-top"
+                    />
                   </div>
-                  <h3 class="card-title mb-2">Elegant Bookshelf</h3>
-                  <p class="card-desc mb-4">
-                    Stylish storage for your favorite reads
-                  </p>
+                  <div class="p-4">
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-2"
+                    >
+                      <span class="badge trending-badge">Trending</span>
+                    </div>
+                    <h3 class="card-title mb-2">Elegant Bookshelf</h3>
+                    <p class="card-desc mb-4">
+                      Stylish storage for your favorite reads
+                    </p>
+                  </div>
+                </a>
+                <div class="p-4 pt-0">
                   <div
                     class="d-flex justify-content-between align-items-center"
                   >
@@ -581,180 +832,294 @@
 
     <!-- New Arrivals Section -->
 
-
- <section class="py-5 bg-white">
-  <div class="container">
-    <!-- Section Heading -->
-    <div class="text-center mb-5">
-      <h2 class="display-5 fw-bold text-brown-primary mb-3">What Our Customers Say</h2>
-      <p class="lead text-muted">Hear from those who have experienced the Odejia difference</p>
-    </div>
-
-    <!-- Testimonial Slider -->
-    <div class="testimonial-grid-slider position-relative overflow-hidden">
-      <div class="testimonial-grid-track" id="testimonialGridTrack">
-        <!-- Testimonial Card 1 -->
-        <div class="testimonial-grid-item">
-          <div class="testimonial-card card border-0 shadow-sm h-100">
-            <img src="./assets/1.jpg" class="card-img-top" alt="Luxury furniture testimonial" style="height: 200px; object-fit: cover;" />
-            <div class="card-body">
-              <div class="d-flex align-items-center mb-3">
-                <img src="./assets/1.jpg" alt="Anita Desai" class="rounded-circle me-3" width="48" height="48" />
-                <div>
-                  <h5 class="mb-0 text-brown-primary">Anita Desai</h5>
-                  <small class="text-muted">Verified Buyer</small>
-                </div>
-              </div>
-              <div class="mb-2 text-warning">★★★★★</div>
-              <p class="card-text fst-italic">
-                "The dining table we purchased from Odejia has become the heart of our home. The craftsmanship is exceptional and the wood quality is outstanding."
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-grid-item">
-          <div class="testimonial-card card border-0 shadow-sm h-100">
-            <img src="./assets/1.jpg" class="card-img-top" alt="Luxury furniture testimonial" style="height: 200px; object-fit: cover;" />
-            <div class="card-body">
-              <div class="d-flex align-items-center mb-3">
-                <img src="./assets/1.jpg" alt="Anita Desai" class="rounded-circle me-3" width="48" height="48" />
-                <div>
-                  <h5 class="mb-0 text-brown-primary">Anita Desai</h5>
-                  <small class="text-muted">Verified Buyer</small>
-                </div>
-              </div>
-              <div class="mb-2 text-warning">★★★★★</div>
-              <p class="card-text fst-italic">
-                "The dining table we purchased from Odejia has become the heart of our home. The craftsmanship is exceptional and the wood quality is outstanding."
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-grid-item">
-          <div class="testimonial-card card border-0 shadow-sm h-100">
-            <img src="./assets/1.jpg" class="card-img-top" alt="Luxury furniture testimonial" style="height: 200px; object-fit: cover;" />
-            <div class="card-body">
-              <div class="d-flex align-items-center mb-3">
-                <img src="./assets/1.jpg" alt="Anita Desai" class="rounded-circle me-3" width="48" height="48" />
-                <div>
-                  <h5 class="mb-0 text-brown-primary">Anita Desai</h5>
-                  <small class="text-muted">Verified Buyer</small>
-                </div>
-              </div>
-              <div class="mb-2 text-warning">★★★★★</div>
-              <p class="card-text fst-italic">
-                "The dining table we purchased from Odejia has become the heart of our home. The craftsmanship is exceptional and the wood quality is outstanding."
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-grid-item">
-          <div class="testimonial-card card border-0 shadow-sm h-100">
-            <img src="./assets/1.jpg" class="card-img-top" alt="Luxury furniture testimonial" style="height: 200px; object-fit: cover;" />
-            <div class="card-body">
-              <div class="d-flex align-items-center mb-3">
-                <img src="./assets/1.jpg" alt="Anita Desai" class="rounded-circle me-3" width="48" height="48" />
-                <div>
-                  <h5 class="mb-0 text-brown-primary">Anita Desai</h5>
-                  <small class="text-muted">Verified Buyer</small>
-                </div>
-              </div>
-              <div class="mb-2 text-warning">★★★★★</div>
-              <p class="card-text fst-italic">
-                "The dining table we purchased from Odejia has become the heart of our home. The craftsmanship is exceptional and the wood quality is outstanding."
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-grid-item">
-          <div class="testimonial-card card border-0 shadow-sm h-100">
-            <img src="./assets/1.jpg" class="card-img-top" alt="Luxury furniture testimonial" style="height: 200px; object-fit: cover;" />
-            <div class="card-body">
-              <div class="d-flex align-items-center mb-3">
-                <img src="./assets/1.jpg" alt="Anita Desai" class="rounded-circle me-3" width="48" height="48" />
-                <div>
-                  <h5 class="mb-0 text-brown-primary">Anita Desai</h5>
-                  <small class="text-muted">Verified Buyer</small>
-                </div>
-              </div>
-              <div class="mb-2 text-warning">★★★★★</div>
-              <p class="card-text fst-italic">
-                "The dining table we purchased from Odejia has become the heart of our home. The craftsmanship is exceptional and the wood quality is outstanding."
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-grid-item">
-          <div class="testimonial-card card border-0 shadow-sm h-100">
-            <img src="./assets/1.jpg" class="card-img-top" alt="Luxury furniture testimonial" style="height: 200px; object-fit: cover;" />
-            <div class="card-body">
-              <div class="d-flex align-items-center mb-3">
-                <img src="./assets/1.jpg" alt="Anita Desai" class="rounded-circle me-3" width="48" height="48" />
-                <div>
-                  <h5 class="mb-0 text-brown-primary">Anita Desai</h5>
-                  <small class="text-muted">Verified Buyer</small>
-                </div>
-              </div>
-              <div class="mb-2 text-warning">★★★★★</div>
-              <p class="card-text fst-italic">
-                "The dining table we purchased from Odejia has become the heart of our home. The craftsmanship is exceptional and the wood quality is outstanding."
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-grid-item">
-          <div class="testimonial-card card border-0 shadow-sm h-100">
-            <img src="./assets/1.jpg" class="card-img-top" alt="Luxury furniture testimonial" style="height: 200px; object-fit: cover;" />
-            <div class="card-body">
-              <div class="d-flex align-items-center mb-3">
-                <img src="./assets/1.jpg" alt="Anita Desai" class="rounded-circle me-3" width="48" height="48" />
-                <div>
-                  <h5 class="mb-0 text-brown-primary">Anita Desai</h5>
-                  <small class="text-muted">Verified Buyer</small>
-                </div>
-              </div>
-              <div class="mb-2 text-warning">★★★★★</div>
-              <p class="card-text fst-italic">
-                "The dining table we purchased from Odejia has become the heart of our home. The craftsmanship is exceptional and the wood quality is outstanding."
-              </p>
-            </div>
-          </div>
+    <section class="py-5 bg-white">
+      <div class="container">
+        <!-- Section Heading -->
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold text-brown-primary mb-3">
+            What Our Customers Say
+          </h2>
+          <p class="lead text-muted">
+            Hear from those who have experienced the Odejia difference
+          </p>
         </div>
 
-        <!-- Repeat testimonial-grid-item blocks as needed -->
-        <div class="testimonial-grid-item">
-          <div class="testimonial-card card border-0 shadow-sm h-100">
-            <img src="./assets/1.jpg" class="card-img-top" alt="Luxury furniture testimonial" style="height: 200px; object-fit: cover;" />
-            <div class="card-body">
-              <div class="d-flex align-items-center mb-3">
-                <img src="./assets/1.jpg" alt="Rahul Mehta" class="rounded-circle me-3" width="48" height="48" />
-                <div>
-                  <h5 class="mb-0 text-brown-primary">Rahul Mehta</h5>
-                  <small class="text-muted">Verified Buyer</small>
+        <!-- Testimonial Slider -->
+        <div class="testimonial-grid-slider position-relative overflow-hidden">
+          <div class="testimonial-grid-track" id="testimonialGridTrack">
+            <!-- Testimonial Card 1 -->
+            <div class="testimonial-grid-item">
+              <div class="testimonial-card card border-0 shadow-sm h-100">
+                <img
+                  src="./assets/1.jpg"
+                  class="card-img-top"
+                  alt="Luxury furniture testimonial"
+                  style="height: 200px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                    <img
+                      src="./assets/1.jpg"
+                      alt="Anita Desai"
+                      class="rounded-circle me-3"
+                      width="48"
+                      height="48"
+                    />
+                    <div>
+                      <h5 class="mb-0 text-brown-primary">Anita Desai</h5>
+                      <small class="text-muted">Verified Buyer</small>
+                    </div>
+                  </div>
+                  <div class="mb-2 text-warning">★★★★★</div>
+                  <p class="card-text fst-italic">
+                    "The dining table we purchased from Odejia has become the
+                    heart of our home. The craftsmanship is exceptional and the
+                    wood quality is outstanding."
+                  </p>
                 </div>
               </div>
-              <div class="mb-2 text-warning">★★★★★</div>
-              <p class="card-text fst-italic">
-                "I've never seen such attention to detail. Our bedroom set is not just furniture—it's art. The team understood exactly what we wanted."
-              </p>
             </div>
+            <div class="testimonial-grid-item">
+              <div class="testimonial-card card border-0 shadow-sm h-100">
+                <img
+                  src="./assets/1.jpg"
+                  class="card-img-top"
+                  alt="Luxury furniture testimonial"
+                  style="height: 200px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                    <img
+                      src="./assets/1.jpg"
+                      alt="Anita Desai"
+                      class="rounded-circle me-3"
+                      width="48"
+                      height="48"
+                    />
+                    <div>
+                      <h5 class="mb-0 text-brown-primary">Anita Desai</h5>
+                      <small class="text-muted">Verified Buyer</small>
+                    </div>
+                  </div>
+                  <div class="mb-2 text-warning">★★★★★</div>
+                  <p class="card-text fst-italic">
+                    "The dining table we purchased from Odejia has become the
+                    heart of our home. The craftsmanship is exceptional and the
+                    wood quality is outstanding."
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-grid-item">
+              <div class="testimonial-card card border-0 shadow-sm h-100">
+                <img
+                  src="./assets/1.jpg"
+                  class="card-img-top"
+                  alt="Luxury furniture testimonial"
+                  style="height: 200px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                    <img
+                      src="./assets/1.jpg"
+                      alt="Anita Desai"
+                      class="rounded-circle me-3"
+                      width="48"
+                      height="48"
+                    />
+                    <div>
+                      <h5 class="mb-0 text-brown-primary">Anita Desai</h5>
+                      <small class="text-muted">Verified Buyer</small>
+                    </div>
+                  </div>
+                  <div class="mb-2 text-warning">★★★★★</div>
+                  <p class="card-text fst-italic">
+                    "The dining table we purchased from Odejia has become the
+                    heart of our home. The craftsmanship is exceptional and the
+                    wood quality is outstanding."
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-grid-item">
+              <div class="testimonial-card card border-0 shadow-sm h-100">
+                <img
+                  src="./assets/1.jpg"
+                  class="card-img-top"
+                  alt="Luxury furniture testimonial"
+                  style="height: 200px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                    <img
+                      src="./assets/1.jpg"
+                      alt="Anita Desai"
+                      class="rounded-circle me-3"
+                      width="48"
+                      height="48"
+                    />
+                    <div>
+                      <h5 class="mb-0 text-brown-primary">Anita Desai</h5>
+                      <small class="text-muted">Verified Buyer</small>
+                    </div>
+                  </div>
+                  <div class="mb-2 text-warning">★★★★★</div>
+                  <p class="card-text fst-italic">
+                    "The dining table we purchased from Odejia has become the
+                    heart of our home. The craftsmanship is exceptional and the
+                    wood quality is outstanding."
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-grid-item">
+              <div class="testimonial-card card border-0 shadow-sm h-100">
+                <img
+                  src="./assets/1.jpg"
+                  class="card-img-top"
+                  alt="Luxury furniture testimonial"
+                  style="height: 200px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                    <img
+                      src="./assets/1.jpg"
+                      alt="Anita Desai"
+                      class="rounded-circle me-3"
+                      width="48"
+                      height="48"
+                    />
+                    <div>
+                      <h5 class="mb-0 text-brown-primary">Anita Desai</h5>
+                      <small class="text-muted">Verified Buyer</small>
+                    </div>
+                  </div>
+                  <div class="mb-2 text-warning">★★★★★</div>
+                  <p class="card-text fst-italic">
+                    "The dining table we purchased from Odejia has become the
+                    heart of our home. The craftsmanship is exceptional and the
+                    wood quality is outstanding."
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-grid-item">
+              <div class="testimonial-card card border-0 shadow-sm h-100">
+                <img
+                  src="./assets/1.jpg"
+                  class="card-img-top"
+                  alt="Luxury furniture testimonial"
+                  style="height: 200px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                    <img
+                      src="./assets/1.jpg"
+                      alt="Anita Desai"
+                      class="rounded-circle me-3"
+                      width="48"
+                      height="48"
+                    />
+                    <div>
+                      <h5 class="mb-0 text-brown-primary">Anita Desai</h5>
+                      <small class="text-muted">Verified Buyer</small>
+                    </div>
+                  </div>
+                  <div class="mb-2 text-warning">★★★★★</div>
+                  <p class="card-text fst-italic">
+                    "The dining table we purchased from Odejia has become the
+                    heart of our home. The craftsmanship is exceptional and the
+                    wood quality is outstanding."
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-grid-item">
+              <div class="testimonial-card card border-0 shadow-sm h-100">
+                <img
+                  src="./assets/1.jpg"
+                  class="card-img-top"
+                  alt="Luxury furniture testimonial"
+                  style="height: 200px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                    <img
+                      src="./assets/1.jpg"
+                      alt="Anita Desai"
+                      class="rounded-circle me-3"
+                      width="48"
+                      height="48"
+                    />
+                    <div>
+                      <h5 class="mb-0 text-brown-primary">Anita Desai</h5>
+                      <small class="text-muted">Verified Buyer</small>
+                    </div>
+                  </div>
+                  <div class="mb-2 text-warning">★★★★★</div>
+                  <p class="card-text fst-italic">
+                    "The dining table we purchased from Odejia has become the
+                    heart of our home. The craftsmanship is exceptional and the
+                    wood quality is outstanding."
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Repeat testimonial-grid-item blocks as needed -->
+            <div class="testimonial-grid-item">
+              <div class="testimonial-card card border-0 shadow-sm h-100">
+                <img
+                  src="./assets/1.jpg"
+                  class="card-img-top"
+                  alt="Luxury furniture testimonial"
+                  style="height: 200px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                    <img
+                      src="./assets/1.jpg"
+                      alt="Rahul Mehta"
+                      class="rounded-circle me-3"
+                      width="48"
+                      height="48"
+                    />
+                    <div>
+                      <h5 class="mb-0 text-brown-primary">Rahul Mehta</h5>
+                      <small class="text-muted">Verified Buyer</small>
+                    </div>
+                  </div>
+                  <div class="mb-2 text-warning">★★★★★</div>
+                  <p class="card-text fst-italic">
+                    "I've never seen such attention to detail. Our bedroom set
+                    is not just furniture—it's art. The team understood exactly
+                    what we wanted."
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add more testimonial-grid-item blocks as needed -->
           </div>
         </div>
 
-        <!-- Add more testimonial-grid-item blocks as needed -->
+        <!-- Scroll Progress -->
+        <div class="text-center mt-4">
+          <div class="scroll-progress">
+            <div
+              class="progress"
+              style="height: 4px; max-width: 200px; margin: 0 auto"
+            >
+              <div
+                class="progress-bar bg-brown-primary"
+                id="scrollProgress"
+                style="width: 0%"
+              ></div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <!-- Scroll Progress -->
-    <div class="text-center mt-4">
-      <div class="scroll-progress">
-        <div class="progress" style="height: 4px; max-width: 200px; margin: 0 auto;">
-          <div class="progress-bar bg-brown-primary" id="scrollProgress" style="width: 0%"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <section id="why-choose-us" class="py-5 bg-brown-light">
       <div class="container">

@@ -20,7 +20,6 @@
 })();
 
 
-<script>
 document.addEventListener('DOMContentLoaded', function() {
   const gridTrack = document.getElementById('testimonialGridTrack');
   const progressBar = document.getElementById('scrollProgress');
@@ -49,4 +48,21 @@ document.addEventListener('DOMContentLoaded', function() {
     gridTrack.style.animationPlayState = 'running';
   });
 });
-</script>
+
+document.addEventListener('DOMContentLoaded', function () {
+  const scrollTrack = document.getElementById('productScrollTrack');
+  const leftBtn = document.querySelector('.scroll-left');
+  const rightBtn = document.querySelector('.scroll-right');
+
+  if (!scrollTrack || !leftBtn || !rightBtn) return;
+
+  const scrollAmount = scrollTrack.offsetWidth * 0.8;
+
+  leftBtn.addEventListener('click', () => {
+    scrollTrack.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+
+  rightBtn.addEventListener('click', () => {
+    scrollTrack.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+});

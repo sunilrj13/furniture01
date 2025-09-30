@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collections - Odejia</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/stylesheet/categories.css" />
+    <link rel="icon" href="./assets/logo.jpeg.jpg" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow sticky-top">
+      <div
+        class="container d-flex align-items-center justify-content-between"
+        style="height: 64px"
+      >
+        <!-- Brand -->
+        <a
+          href="index.html"
+          class="navbar-brand fw-bold text-brown-primary fs-4 d-flex align-items-center"
+        >
+          <img
+            src="./assets/logo.jpeg.jpg"
+            alt="Odejia Logo"
+            style="height: 40px; width: auto"
+          />
+        </a>
+
+        <!-- Desktop links (lg and up) -->
+        <ul
+          class="nav d-none d-lg-flex align-items-center mb-0"
+          style="gap: 1.5rem"
+        >
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Icons + mobile toggler (visible below lg) -->
+        <div class="d-flex align-items-center gap-2">
+          <!-- Search icon -->
+          <button class="btn btn-link p-1 icon-button" aria-label="Search">
+            <svg
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button>
+
+          <!-- Wishlist -->
+          <button class="btn btn-link p-1 icon-button" aria-label="Wishlist">
+            <svg
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+              />
+            </svg>
+          </button>
+
+          <!-- Cart -->
+          <button
+            class="btn btn-link p-1 icon-button position-relative"
+            aria-label="Cart"
+            style="line-height: 1"
+          >
+            <svg
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+              />
+            </svg>
+            <span
+              class="badge cart-badge position-absolute top-0 start-100 translate-middle"
+              >0</span
+            >
+          </button>
+
+          <!-- Mobile toggler (below lg) -->
+          <button
+            class="btn btn-link p-2 d-lg-none"
+            data-bs-toggle="collapse"
+            data-bs-target="#mobile-menu"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <svg
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="collapse d-lg-none bg-white" id="mobile-menu">
+        <ul class="nav flex-column pt-2 pb-3 mb-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">New Arrivals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="categories-hero py-5">
+      <div class="container">
+        <div class="row align-items-center min-vh-80 py-5">
+          <div class="col-lg-6 text-center text-lg-start">
+            <h1 class="display-2 fw-bold text-brown-primary mb-4">
+              Discover Our World of Craftsmanship
+            </h1>
+            <p class="lead mb-4">
+              Where timeless design meets exceptional quality in every piece we
+              create.
+            </p>
+            <div
+              class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start"
+            >
+              <a
+                href="#categories-grid"
+                class="btn btn-brown-primary btn-lg px-5 py-3"
+                >Explore Collections</a
+              >
+              <a
+                href="#featured"
+                class="btn btn-outline-brown-primary btn-lg px-5 py-3"
+                >Featured Pieces</a
+              >
+            </div>
+          </div>
+          <div class="col-lg-6 mt-5 mt-lg-0">
+            <div class="ratio ratio-16x9">
+              <img
+                src="./assets/1.jpg"
+                alt="Odejia Collections"
+                class="img-fluid rounded-4 object-fit-cover shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Grid -->
+    <section id="categories-grid" class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-3 fw-bold text-brown-primary mb-3">
+            Our Collections
+          </h2>
+          <p class="lead text-muted">
+            Curated categories for every space and style
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Living Room -->
+          <div class="col-md-6 col-lg-4">
+            <a href="living-room.html" class="text-decoration-none">
+              <div
+                class="category-card position-relative overflow-hidden rounded-4 shadow-sm"
+              >
+                <div class="ratio ratio-4x3">
+                  <img
+                    src="./assets/1.jpg"
+                    class="category-img object-fit-cover"
+                    alt="Living Room"
+                  />
+                </div>
+                <div
+                  class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end p-4"
+                >
+                  <div class="text-white">
+                    <h3 class="category-title fw-bold mb-2">Living Room</h3>
+                    <p class="category-desc mb-3">
+                      Sofas, coffee tables, entertainment units
+                    </p>
+                    <span class="category-count badge bg-brown-primary"
+                      >42 Products</span
+                    >
+                  </div>
+                </div>
+                <div class="category-badge position-absolute top-0 end-0 m-4">
+                  <span class="badge bg-white text-brown-primary px-3 py-2"
+                    >Popular</span
+                  >
+                </div>
+                <div
+                  class="category-hover-effect position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                >
+                  <div class="text-white text-center">
+                    <i class="fas fa-arrow-right fa-2x mb-2"></i>
+                    <p class="mb-0 fw-semibold">Explore Collection</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Bedroom -->
+          <div class="col-md-6 col-lg-4">
+            <a href="living-room.html" class="text-decoration-none">
+              <div
+                class="category-card position-relative overflow-hidden rounded-4 shadow-sm"
+              >
+                <div class="ratio ratio-4x3">
+                  <img
+                    src="./assets/1.jpg"
+                    class="category-img object-fit-cover"
+                    alt="Bedroom"
+                  />
+                </div>
+                <div
+                  class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end p-4"
+                >
+                  <div class="text-white">
+                    <h3 class="category-title fw-bold mb-2">Bedroom</h3>
+                    <p class="category-desc mb-3">
+                      Beds, wardrobes, nightstands
+                    </p>
+                    <span class="category-count badge bg-brown-primary"
+                      >38 Products</span
+                    >
+                  </div>
+                </div>
+                <div class="category-badge position-absolute top-0 end-0 m-4">
+                  <span class="badge bg-white text-brown-primary px-3 py-2"
+                    >New</span
+                  >
+                </div>
+                <div
+                  class="category-hover-effect position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                >
+                  <div class="text-white text-center">
+                    <i class="fas fa-arrow-right fa-2x mb-2"></i>
+                    <p class="mb-0 fw-semibold">Explore Collection</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Dining Room -->
+          <div class="col-md-6 col-lg-4">
+            <a href="living-room.html" class="text-decoration-none">
+              <div
+                class="category-card position-relative overflow-hidden rounded-4 shadow-sm"
+              >
+                <div class="ratio ratio-4x3">
+                  <img
+                    src="./assets/1.jpg"
+                    class="category-img object-fit-cover"
+                    alt="Dining Room"
+                  />
+                </div>
+                <div
+                  class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end p-4"
+                >
+                  <div class="text-white">
+                    <h3 class="category-title fw-bold mb-2">Dining Room</h3>
+                    <p class="category-desc mb-3">Tables, chairs, sideboards</p>
+                    <span class="category-count badge bg-brown-primary"
+                      >35 Products</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="category-hover-effect position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                >
+                  <div class="text-white text-center">
+                    <i class="fas fa-arrow-right fa-2x mb-2"></i>
+                    <p class="mb-0 fw-semibold">Explore Collection</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Office -->
+          <div class="col-md-6 col-lg-4">
+            <a href="living-room.html" class="text-decoration-none">
+              <div
+                class="category-card position-relative overflow-hidden rounded-4 shadow-sm"
+              >
+                <div class="ratio ratio-4x3">
+                  <img
+                    src="./assets/1.jpg"
+                    class="category-img object-fit-cover"
+                    alt="Office"
+                  />
+                </div>
+                <div
+                  class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end p-4"
+                >
+                  <div class="text-white">
+                    <h3 class="category-title fw-bold mb-2">Office</h3>
+                    <p class="category-desc mb-3">Desks, chairs, bookshelves</p>
+                    <span class="category-count badge bg-brown-primary"
+                      >28 Products</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="category-hover-effect position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                >
+                  <div class="text-white text-center">
+                    <i class="fas fa-arrow-right fa-2x mb-2"></i>
+                    <p class="mb-0 fw-semibold">Explore Collection</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Outdoor -->
+          <div class="col-md-6 col-lg-4">
+            <a href="outdoor.html" class="text-decoration-none">
+              <div
+                class="category-card position-relative overflow-hidden rounded-4 shadow-sm"
+              >
+                <div class="ratio ratio-4x3">
+                  <img
+                    src="./assets/1.jpg"
+                    class="category-img object-fit-cover"
+                    alt="Outdoor"
+                  />
+                </div>
+                <div
+                  class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end p-4"
+                >
+                  <div class="text-white">
+                    <h3 class="category-title fw-bold mb-2">Outdoor</h3>
+                    <p class="category-desc mb-3">
+                      Garden furniture, patio sets
+                    </p>
+                    <span class="category-count badge bg-brown-primary"
+                      >24 Products</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="category-hover-effect position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                >
+                  <div class="text-white text-center">
+                    <i class="fas fa-arrow-right fa-2x mb-2"></i>
+                    <p class="mb-0 fw-semibold">Explore Collection</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Accessories -->
+          <div class="col-md-6 col-lg-4">
+            <a href="accessories.html" class="text-decoration-none">
+              <div
+                class="category-card position-relative overflow-hidden rounded-4 shadow-sm"
+              >
+                <div class="ratio ratio-4x3">
+                  <img
+                    src="./assets/1.jpg"
+                    class="category-img object-fit-cover"
+                    alt="Accessories"
+                  />
+                </div>
+                <div
+                  class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end p-4"
+                >
+                  <div class="text-white">
+                    <h3 class="category-title fw-bold mb-2">Accessories</h3>
+                    <p class="category-desc mb-3">
+                      Decor items, finishing touches
+                    </p>
+                    <span class="category-count badge bg-brown-primary"
+                      >56 Products</span
+                    >
+                  </div>
+                </div>
+                <div class="category-badge position-absolute top-0 end-0 m-4">
+                  <span class="badge bg-white text-brown-primary px-3 py-2"
+                    >Bestseller</span
+                  >
+                </div>
+                <div
+                  class="category-hover-effect position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                >
+                  <div class="text-white text-center">
+                    <i class="fas fa-arrow-right fa-2x mb-2"></i>
+                    <p class="mb-0 fw-semibold">Explore Collection</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="featured" class="py-5 bg-white">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-4 fw-bold text-brown-primary mb-3">
+            Featured Masterpieces
+          </h2>
+          <p class="lead text-muted">Handpicked excellence from our artisans</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Featured Product 1 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100 featured-product">
+              <div class="position-relative">
+                <div class="ratio ratio-4x3">
+                  <img
+                    src="./assets/1.jpg"
+                    class="card-img-top object-fit-cover"
+                    alt="Modern Sofa"
+                  />
+                </div>
+                <div class="position-absolute top-0 start-0 m-3">
+                  <span class="badge bg-brown-primary">Featured</span>
+                </div>
+                <button
+                  class="position-absolute top-0 end-0 m-3 btn btn-light btn-sm rounded-circle shadow"
+                >
+                  <i class="far fa-heart"></i>
+                </button>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-brown-primary fw-bold">
+                  Elegant Sofa Set
+                </h5>
+                <p class="card-text text-muted small flex-grow-1">
+                  Luxurious comfort meets contemporary design
+                </p>
+                <div
+                  class="d-flex justify-content-between align-items-center mt-auto"
+                >
+                  <span class="text-brown-primary fw-bold fs-5">$1,299</span>
+                  <button class="btn btn-brown-primary btn-sm">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Product 2 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100 featured-product">
+              <div class="position-relative">
+                <div class="ratio ratio-4x3">
+                  <img
+                    src="./assets/1.jpg"
+                    class="card-img-top object-fit-cover"
+                    alt="Dining Table"
+                  />
+                </div>
+                <div class="position-absolute top-0 start-0 m-3">
+                  <span class="badge bg-brown-primary">Featured</span>
+                </div>
+                <button
+                  class="position-absolute top-0 end-0 m-3 btn btn-light btn-sm rounded-circle shadow"
+                >
+                  <i class="far fa-heart"></i>
+                </button>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-brown-primary fw-bold">
+                  Solid Wood Table
+                </h5>
+                <p class="card-text text-muted small flex-grow-1">
+                  6-seater masterpiece for family gatherings
+                </p>
+                <div
+                  class="d-flex justify-content-between align-items-center mt-auto"
+                >
+                  <span class="text-brown-primary fw-bold fs-5">$899</span>
+                  <button class="btn btn-brown-primary btn-sm">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Product 3 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100 featured-product">
+              <div class="position-relative">
+                <div class="ratio ratio-4x3">
+                  <img
+                    src="./assets/1.jpg"
+                    class="card-img-top object-fit-cover"
+                    alt="Bookshelf"
+                  />
+                </div>
+                <div class="position-absolute top-0 start-0 m-3">
+                  <span class="badge bg-brown-primary">Featured</span>
+                </div>
+                <button
+                  class="position-absolute top-0 end-0 m-3 btn btn-light btn-sm rounded-circle shadow"
+                >
+                  <i class="far fa-heart"></i>
+                </button>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-brown-primary fw-bold">
+                  Classic Bookshelf
+                </h5>
+                <p class="card-text text-muted small flex-grow-1">
+                  5-tier storage with elegant design
+                </p>
+                <div
+                  class="d-flex justify-content-between align-items-center mt-auto"
+                >
+                  <span class="text-brown-primary fw-bold fs-5">$499</span>
+                  <button class="btn btn-brown-primary btn-sm">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Product 4 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 shadow-sm h-100 featured-product">
+              <div class="position-relative">
+                <div class="ratio ratio-4x3">
+                  <img
+                    src="./assets/1.jpg"
+                    class="card-img-top object-fit-cover"
+                    alt="Bed"
+                  />
+                </div>
+                <div class="position-absolute top-0 start-0 m-3">
+                  <span class="badge bg-brown-primary">Featured</span>
+                </div>
+                <button
+                  class="position-absolute top-0 end-0 m-3 btn btn-light btn-sm rounded-circle shadow"
+                >
+                  <i class="far fa-heart"></i>
+                </button>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-brown-primary fw-bold">
+                  King Size Bed
+                </h5>
+                <p class="card-text text-muted small flex-grow-1">
+                  Luxurious comfort with storage
+                </p>
+                <div
+                  class="d-flex justify-content-between align-items-center mt-auto"
+                >
+                  <span class="text-brown-primary fw-bold fs-5">$1,599</span>
+                  <button class="btn btn-brown-primary btn-sm">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-5 bg-brown-primary text-white">
+      <div class="container">
+        <div class="row g-4 text-center">
+          <div class="col-md-3">
+            <div class="stat-item">
+              <div class="display-4 fw-bold mb-2">500+</div>
+              <p class="mb-0 opacity-75">Happy Customers</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="stat-item">
+              <div class="display-4 fw-bold mb-2">30+</div>
+              <p class="mb-0 opacity-75">Years Experience</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="stat-item">
+              <div class="display-4 fw-bold mb-2">1000+</div>
+              <p class="mb-0 opacity-75">Pieces Delivered</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="stat-item">
+              <div class="display-4 fw-bold mb-2">50+</div>
+              <p class="mb-0 opacity-75">Design Awards</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row align-items-center text-center">
+          <div class="col-lg-8 mx-auto">
+            <h2 class="display-5 fw-bold text-brown-primary mb-3">
+              Ready to Transform Your Space?
+            </h2>
+            <p class="lead mb-4">
+              Let our collection inspire your next interior transformation
+            </p>
+            <div class="d-flex flex-wrap gap-3 justify-content-center">
+              <a href="#" class="btn btn-brown-primary btn-lg px-5"
+                >Shop All Collections</a
+              >
+              <a href="#" class="btn btn-outline-brown-primary btn-lg px-5"
+                >Book Consultation</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <h5 class="text-brown-primary mb-3">Odejia</h5>
+            <p class="text-white-50">
+              Premium handcrafted wooden furniture and home decor. Bringing
+              tradition and modern design together.
+            </p>
+          </div>
+
+          <div class="col-md-4">
+            <h5 class="text-brown-primary mb-3">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="index.html" class="text-white-50 text-decoration-none"
+                  >Home</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="about.html" class="text-white-50 text-decoration-none"
+                  >About Us</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-white-50 text-decoration-none"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white-50 text-decoration-none"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <h5 class="text-brown-primary mb-3">Contact Us</h5>
+            <p class="text-white-50 mb-1">
+              📍 123, Heritage Street, Jaipur, India
+            </p>
+            <p class="text-white-50 mb-1">📞 +91 98765 43210</p>
+            <p class="text-white-50 mb-3">✉️ info@odejia.com</p>
+            <div class="d-flex gap-3">
+              <a href="#" class="text-white-50"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-white-50"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-white-50"
+                ><i class="fab fa-pinterest"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-light my-4" />
+
+        <div class="text-center pt-2">
+          <p class="text-white-50 mb-0">
+            &copy; 2025 Odejia. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Simple interactivity
+      document.addEventListener("DOMContentLoaded", function () {
+        // Wishlist functionality
+        document
+          .querySelectorAll(".btn-light.rounded-circle")
+          .forEach((btn) => {
+            btn.addEventListener("click", function (e) {
+              e.preventDefault();
+              const icon = this.querySelector("i");
+              if (icon.classList.contains("far")) {
+                icon.classList.replace("far", "fas");
+                this.classList.add("text-danger");
+              } else {
+                icon.classList.replace("fas", "far");
+                this.classList.remove("text-danger");
+              }
+            });
+          });
+      });
+    </script>
+  </body>
+</html>
