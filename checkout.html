@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Odejia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .checkout-step.active .step-number {
+            background-color: var(--brown-primary);
+            color: white;
+        }
+        
+        .checkout-step.completed .step-number {
+            background-color: #28a745;
+            color: white;
+        }
+        
+        .payment-method-card {
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .payment-method-card:hover,
+        .payment-method-card.selected {
+            border-color: var(--brown-primary);
+            background-color: var(--brown-bg-light);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-white shadow sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-brown-primary fs-4 d-flex align-items-center" href="index.html">
+                <img src="./assets/logo.jpeg.jpg" alt="Odejia Logo" style="height: 40px; width: auto">
+            </a>
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="categories.html">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center gap-2">
+                    <button class="btn btn-link p-1 icon-button" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    
+                    <button class="btn btn-link p-1 icon-button" aria-label="Wishlist">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    
+                    <button class="btn btn-link p-1 icon-button position-relative" aria-label="Cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="badge cart-badge position-absolute top-0 start-100 translate-middle">3</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <nav class="bg-brown-light py-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h1 class="h4 mb-0 text-brown-primary fw-bold">Checkout</h1>
+                </div>
+                <div class="col-auto">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="index.html" class="text-brown-primary text-decoration-none">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#" class="text-brown-primary text-decoration-none">Cart</a></li>
+                            <li class="breadcrumb-item active text-brown-primary" aria-current="page">Checkout</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Checkout Steps -->
+    <section class="py-4 bg-white border-bottom">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="row text-center">
+                        <div class="col-4 checkout-step active">
+                            <div class="step-number rounded-circle d-flex align-items-center justify-content-center mx-auto mb-2" style="width:40px; height:40px; background-color: var(--brown-primary); color: black; font-weight: bold;">1</div>
+                            <small class="fw-semibold text-brown-primary">Shipping</small>
+                        </div>
+                        <div class="col-4 checkout-step">
+                            <div class="step-number rounded-circle d-flex align-items-center justify-content-center mx-auto mb-2" style="width:40px; height:40px; background-color: #e9ecef; color: #6c757d; font-weight: bold;">2</div>
+                            <small class="fw-semibold text-muted">Payment</small>
+                        </div>
+                        <div class="col-4 checkout-step">
+                            <div class="step-number rounded-circle d-flex align-items-center justify-content-center mx-auto mb-2" style="width:40px; height:40px; background-color: #e9ecef; color: #6c757d; font-weight: bold;">3</div>
+                            <small class="fw-semibold text-muted">Confirmation</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout Form -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Shipping & Payment -->
+                <div class="col-lg-8">
+                    <!-- Shipping Information -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-brown-light border-0 py-3">
+                            <h5 class="card-title mb-0 text-brown-primary fw-bold">
+                                <i class="fas fa-truck me-2"></i>Shipping Information
+                            </h5>
+                        </div>
+                        <div class="card-body p-4">
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-semibold">First Name</label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-semibold">Last Name</label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label fw-semibold">Email</label>
+                                        <input type="email" class="form-control" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label fw-semibold">Phone</label>
+                                        <input type="tel" class="form-control" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label fw-semibold">Address</label>
+                                        <input type="text" class="form-control" placeholder="Street Address" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-semibold">City</label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-semibold">State</label>
+                                        <select class="form-select" required>
+                                            <option value="">Select State</option>
+                                            <option>Rajasthan</option>
+                                            <option>Delhi</option>
+                                            <option>Maharashtra</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-semibold">ZIP Code</label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-semibold">Country</label>
+                                        <select class="form-select" required>
+                                            <option>India</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Shipping Method -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-brown-light border-0 py-3">
+                            <h5 class="card-title mb-0 text-brown-primary fw-bold">
+                                <i class="fas fa-shipping-fast me-2"></i>Shipping Method
+                            </h5>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="radio" name="shippingMethod" id="standard" checked>
+                                <label class="form-check-label d-flex justify-content-between w-100" for="standard">
+                                    <span>Standard Shipping</span>
+                                    <span class="text-brown-primary fw-bold">Free</span>
+                                </label>
+                                <small class="text-muted">5-7 business days</small>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="shippingMethod" id="express">
+                                <label class="form-check-label d-flex justify-content-between w-100" for="express">
+                                    <span>Express Shipping</span>
+                                    <span class="text-brown-primary fw-bold">$29.99</span>
+                                </label>
+                                <small class="text-muted">2-3 business days</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Method -->
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header bg-brown-light border-0 py-3">
+                            <h5 class="card-title mb-0 text-brown-primary fw-bold">
+                                <i class="fas fa-credit-card me-2"></i>Payment Method
+                            </h5>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="payment-method-card h-100 p-3" onclick="selectPayment('card')">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" checked>
+                                            <label class="form-check-label fw-semibold" for="creditCard">
+                                                Credit/Debit Card
+                                            </label>
+                                        </div>
+                                        <div class="mt-2">
+                                            <div class="row g-2">
+                                                <div class="col-3">
+                                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='25' viewBox='0 0 40 25'%3E%3Crect width='40' height='25' fill='%231976d2' rx='3'/%3E%3Ctext x='20' y='17' font-size='10' fill='white' text-anchor='middle' font-family='Arial' font-weight='bold'%3EVISA%3C/text%3E%3C/svg%3E" alt="Visa" class="img-fluid">
+                                                </div>
+                                                <div class="col-3">
+                                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='25' viewBox='0 0 40 25'%3E%3Crect width='40' height='25' fill='white' rx='3'/%3E%3Ccircle cx='16' cy='12.5' r='7' fill='%23ff5f00'/%3E%3Ccircle cx='24' cy='12.5' r='7' fill='%23f79e1b' fill-opacity='0.8'/%3E%3Ctext x='20' y='21' font-size='8' fill='black' text-anchor='middle' font-family='Arial' font-weight='bold'%3EMastercard%3C/text%3E%3C/svg%3E" alt="Mastercard" class="img-fluid">
+                                                </div>
+                                                <div class="col-3">
+                                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='25' viewBox='0 0 40 25'%3E%3Crect width='40' height='25' fill='%23005BAA' rx='3'/%3E%3Ctext x='20' y='17' font-size='10' fill='white' text-anchor='middle' font-family='Arial' font-weight='bold'%3ERuPay%3C/text%3E%3C/svg%3E" alt="RuPay" class="img-fluid">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="payment-method-card h-100 p-3" onclick="selectPayment('paypal')">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="paymentMethod" id="paypal">
+                                            <label class="form-check-label fw-semibold" for="paypal">
+                                                PayPal
+                                            </label>
+                                        </div>
+                                        <div class="mt-2">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" class="img-fluid" style="height: 24px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card Details -->
+                            <div class="mt-4" id="cardDetails">
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <label class="form-label fw-semibold">Card Number</label>
+                                        <input type="text" class="form-control" placeholder="1234 5678 9012 3456" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-semibold">Expiry Date</label>
+                                        <input type="text" class="form-control" placeholder="MM/YY" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-semibold">CVV</label>
+                                        <input type="text" class="form-control" placeholder="123" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label fw-semibold">Cardholder Name</label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm sticky-top" style="top: 100px;">
+                        <div class="card-header bg-brown-light border-0 py-3">
+                            <h5 class="card-title mb-0 text-brown-primary fw-bold">
+                                <i class="fas fa-receipt me-2"></i>Order Summary
+                            </h5>
+                        </div>
+                        <div class="card-body p-4">
+                            <!-- Order Items -->
+                            <div class="mb-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="./assets/1.jpg" alt="Modern Coffee Table" class="rounded-2 me-3" width="60" height="60" style="object-fit: cover;">
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1 fw-semibold">Modern Coffee Table</h6>
+                                        <small class="text-muted">Qty: 1</small>
+                                    </div>
+                                    <div class="text-brown-primary fw-bold">$849.00</div>
+                                </div>
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="./assets/1.jpg" alt="Luxury Sofa" class="rounded-2 me-3" width="60" height="60" style="object-fit: cover;">
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1 fw-semibold">Luxury Sofa</h6>
+                                        <small class="text-muted">Qty: 1</small>
+                                    </div>
+                                    <div class="text-brown-primary fw-bold">$1,299.00</div>
+                                </div>
+                            </div>
+
+                            <!-- Price Breakdown -->
+                            <div class="border-top pt-3">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-muted">Subtotal</span>
+                                    <span>$2,148.00</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-muted">Shipping</span>
+                                    <span>Free</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-muted">Tax</span>
+                                    <span>$214.80</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-3 fw-bold fs-5">
+                                    <span class="text-brown-primary">Total</span>
+                                    <span class="text-brown-primary">$2,362.80</span>
+                                </div>
+                            </div>
+
+                            <!-- Promo Code -->
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Promo Code</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Enter code">
+                                    <button class="btn btn-outline-brown-primary" type="button">Apply</button>
+                                </div>
+                            </div>
+
+                            <!-- Terms & Place Order -->
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" id="terms" required>
+                                <label class="form-check-label small" for="terms">
+                                    I agree to the <a href="#" class="text-brown-primary">Terms & Conditions</a> and <a href="#" class="text-brown-primary">Privacy Policy</a>
+                                </label>
+                            </div>
+
+                            <button class="btn-outline-brown-primary rounded-2 w-100 py-3 fw-bold fs-5 mb-2" type="submit ">
+                                <i class="fas fa-lock me-2 "></i>Place Order
+                            </button>
+
+                            <div class="text-center mt-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-shield-alt me-1"></i>
+                                    Your payment is secure and encrypted
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-brown-primary">Odejia</h5>
+                    <p class="text-white-50">Premium handcrafted wooden furniture and home decor. Bringing tradition and modern design together.</p>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-brown-primary">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Craftsmanship</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Design Tips</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Gallery</a></li>
+                        <li><a href="contact.html" class="text-white-50 text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-brown-primary">Contact Us</h5>
+                    <p class="text-white-50 mb-1">📍 123, Heritage Street, Jaipur, India</p>
+                    <p class="text-white-50 mb-1">📞 +91 98765 43210</p>
+                    <p class="text-white-50 mb-1">✉️ info@odejia.com</p>
+                    <div class="mt-2">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-light">
+
+            <div class="text-center pt-3">
+                <p class="text-white-50 mb-0">&copy; 2025 Odejia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function selectPayment(method) {
+            // Remove selected class from all payment cards
+            document.querySelectorAll('.payment-method-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            
+            // Add selected class to clicked card
+            event.currentTarget.classList.add('selected');
+            
+            // Update radio button
+            const radio = event.currentTarget.querySelector('input[type="radio"]');
+            radio.checked = true;
+            
+            // Show/hide card details
+            const cardDetails = document.getElementById('cardDetails');
+            if (method === 'card') {
+                cardDetails.style.display = 'block';
+            } else {
+                cardDetails.style.display = 'none';
+            }
+        }
+
+        // Initialize payment method selection
+        document.addEventListener('DOMContentLoaded', function() {
+            selectPayment('card');
+        });
+    </script>
+</body>
+</html>

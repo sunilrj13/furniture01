@@ -210,7 +210,7 @@
             >
             <a
               href="#"
-              class="btn btn-lg border border-brown-primary text-white fw-semibold px-4 py-2 btn-outline-light"
+              class="btn btn-lg border btn-outline-brown-primary text-white fw-semibold px-4 py-2"
               >View Gallery</a
             >
           </div>
@@ -541,7 +541,7 @@
                       class="d-flex justify-content-between align-items-center"
                     >
                       <span class="price-tag">$849</span>
-                      <button class="btn-custom">Add to Cart</button>
+                      <a class="btn-custom" href="cart-page.html" >Add to Cart</a>
                     </div>
                   </div>
                 </div>
@@ -1121,132 +1121,90 @@
       </div>
     </section>
 
-    <section id="why-choose-us" class="py-5 bg-brown-light">
+    <section id="why-choose-us" class="py-5 bg-light"></section>
       <div class="container">
-        <h2 class="text-center mb-5 section-title">Why Choose Us</h2>
-
-        <div class="row g-4 align-items-center">
-          <!-- Left Column -->
-          <div class="col-lg-6">
-            <div class="mb-4">
-              <h3 class="mb-3">Master Craftsmanship</h3>
-              <p>
-                Each piece is meticulously handcrafted by skilled artisans with
-                decades of experience.
-              </p>
-              <img
-                src="./assets/1.jpg"
-                alt="Master craftsman at work"
-                class="img-fluid rounded shadow"
-                style="max-height: 250px; object-fit: cover; width: 100%"
-              />
-            </div>
-
-            <div class="mb-4">
-              <h3 class="mb-3">Premium Materials</h3>
-              <p>
-                We use only the finest sustainably sourced hardwoods and premium
-                finishes.
-              </p>
-              <img
-                src="./assets/1.jpg"
-                alt="Premium woodworking tools"
-                class="img-fluid rounded shadow"
-                style="max-height: 250px; object-fit: cover; width: 100%"
-              />
-            </div>
-
-            <div>
-              <h3 class="mb-3">Lifetime Guarantee</h3>
-              <p>
-                Every piece comes with a lifetime guarantee on craftsmanship and
-                structural integrity.
-              </p>
-              <img
-                src="./assets/1.jpg"
-                alt="Professional workshop tools"
-                class="img-fluid rounded shadow"
-                style="max-height: 250px; object-fit: cover; width: 100%"
-              />
+        <h2 class="text-center mb-5 section-title fw-bold text-brown-primary">Why Choose Us</h2>
+        <div class="row g-4 align-items-stretch">
+          <!-- Left Column: Features -->
+          <div class="col-lg-7">
+            <div class="row g-4">
+              <div class="col-12 col-md-6">
+                <div class="feature-card h-100 bg-white rounded-4 shadow-sm p-4 d-flex flex-column align-items-center text-center">
+                  <div class="mb-3 w-100 d-flex justify-content-center">
+                    <img src="./assets/1.jpg" alt="Master craftsman at work" class="img-fluid rounded-circle" style="width:120px;height:120px;object-fit:cover;">
+                  </div>
+                  <h4 class="fw-semibold mb-2 text-brown-primary">Master Craftsmanship</h4>
+                  <p class="text-muted mb-0">Meticulously handcrafted by skilled artisans with decades of experience.</p>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="feature-card h-100 bg-white rounded-4 shadow-sm p-4 d-flex flex-column align-items-center text-center">
+                  <div class="mb-3 w-100 d-flex justify-content-center">
+                    <img src="./assets/1.jpg" alt="Premium woodworking tools" class="img-fluid rounded-circle" style="width:120px;height:120px;object-fit:cover;">
+                  </div>
+                  <h4 class="fw-semibold mb-2 text-brown-primary">Premium Materials</h4>
+                  <p class="text-muted mb-0">Finest sustainably sourced hardwoods and premium finishes.</p>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="feature-card h-100 bg-white rounded-4 shadow-sm p-4 d-flex flex-column align-items-center text-center">
+                  <div class="mb-3 w-100 d-flex justify-content-center">
+                    <img src="./assets/1.jpg" alt="Professional workshop tools" class="img-fluid rounded-circle" style="width:120px;height:120px;object-fit:cover;">
+                  </div>
+                  <h4 class="fw-semibold mb-2 text-brown-primary">Lifetime Guarantee</h4>
+                  <p class="text-muted mb-0">Lifetime guarantee on craftsmanship and structural integrity.</p>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="feature-card h-100 bg-white rounded-4 shadow-sm p-4 d-flex flex-column align-items-center text-center">
+                  <div class="mb-3 w-100 d-flex justify-content-center">
+                    <img src="./assets/1.jpg" alt="Customization options" class="img-fluid rounded-circle" style="width:120px;height:120px;object-fit:cover;">
+                  </div>
+                  <h4 class="fw-semibold mb-2 text-brown-primary">Customization</h4>
+                  <p class="text-muted mb-0">Tailored designs to fit your unique style and space.</p>
+                </div>
+              </div>
             </div>
           </div>
-
-          <!-- Right Column -->
-          <div class="col-lg-6">
-            <div class="bg-white p-4 rounded shadow">
-              <h3 class="mb-3">Our Promise</h3>
+          <!-- Right Column: Promise -->
+          <div class="col-lg-5">
+            <div class="bg-white rounded-4 shadow-lg p-4 h-100 d-flex flex-column justify-content-center">
+              <h3 class="mb-4 fw-bold text-brown-primary text-center">Our Promise</h3>
               <ul class="list-unstyled mb-0">
-                <li class="d-flex align-items-start mb-2">
-                  <svg
-                    class="text-brown-primary me-2"
-                    width="20"
-                    height="20"
-                    fill="currentColor"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M13.854 3.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 111.414-.708L6.5 10.793l6.646-6.647a.5.5 0 01.708 0z"
-                    />
-                  </svg>
-                  Handcrafted with passion and precision
+                <li class="d-flex align-items-center mb-3">
+                  <span class="me-3">
+                    <i class="bi bi-check-circle-fill text-brown-primary fs-4"></i>
+                  </span>
+                  <span class="fw-semibold">Handcrafted with passion and precision</span>
                 </li>
-                <li class="d-flex align-items-start mb-2">
-                  <svg
-                    class="text-brown-primary me-2"
-                    width="20"
-                    height="20"
-                    fill="currentColor"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M13.854 3.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 111.414-.708L6.5 10.793l6.646-6.647a.5.5 0 01.708 0z"
-                    />
-                  </svg>
-                  Sustainable and ethically sourced materials
+                <li class="d-flex align-items-center mb-3">
+                  <span class="me-3">
+                    <i class="bi bi-check-circle-fill text-brown-primary fs-4"></i>
+                  </span>
+                  <span class="fw-semibold">Sustainable and ethically sourced materials</span>
                 </li>
-                <li class="d-flex align-items-start mb-2">
-                  <svg
-                    class="text-brown-primary me-2"
-                    width="20"
-                    height="20"
-                    fill="currentColor"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M13.854 3.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 111.414-.708L6.5 10.793l6.646-6.647a.5.5 0 01.708 0z"
-                    />
-                  </svg>
-                  White glove delivery and setup
+                <li class="d-flex align-items-center mb-3">
+                  <span class="me-3">
+                    <i class="bi bi-check-circle-fill text-brown-primary fs-4"></i>
+                  </span>
+                  <span class="fw-semibold">White glove delivery and setup</span>
                 </li>
-                <li class="d-flex align-items-start mb-2">
-                  <svg
-                    class="text-brown-primary me-2"
-                    width="20"
-                    height="20"
-                    fill="currentColor"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M13.854 3.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 111.414-.708L6.5 10.793l6.646-6.647a.5.5 0 01.708 0z"
-                    />
-                  </svg>
-                  Customization options available
+                <li class="d-flex align-items-center mb-3">
+                  <span class="me-3">
+                    <i class="bi bi-check-circle-fill text-brown-primary fs-4"></i>
+                  </span>
+                  <span class="fw-semibold">Customization options available</span>
                 </li>
-                <li class="d-flex align-items-start">
-                  <svg
-                    class="text-brown-primary me-2"
-                    width="20"
-                    height="20"
-                    fill="currentColor"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M13.854 3.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 111.414-.708L6.5 10.793l6.646-6.647a.5.5 0 01.708 0z"
-                    />
-                  </svg>
-                  Dedicated customer support
+                <li class="d-flex align-items-center">
+                  <span class="me-3">
+                    <i class="bi bi-check-circle-fill text-brown-primary fs-4"></i>
+                  </span>
+                  <span class="fw-semibold">Dedicated customer support</span>
                 </li>
               </ul>
+              <div class="text-center mt-4">
+                <a href="contact.html" class="btn btn-brown-primary btn-lg px-4">Contact Us</a>
+              </div>
             </div>
           </div>
         </div>

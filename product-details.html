@@ -1,801 +1,621 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modern Coffee Table - Odejia</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&family=Lato:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="./assets/logo.jpeg.jpg" type="image/x-icon" />
-    <link rel="stylesheet" href="stylesheet/productDetails.css" />
-    <style>
-      /* Minimal custom CSS only for zoom and scroll */
 
-    </style>
-  </head>
-  <body>
-    <!-- Navigation -->
-    <nav class="bg-white shadow sticky-top">
-      <div
-        class="container d-flex align-items-center justify-content-between"
-        style="height: 64px"
-      >
-        <!-- Brand -->
-        <a
-          href="index.html"
-          class="navbar-brand fw-bold text-brown-primary fs-4 d-flex align-items-center"
-        >
-          <img
-            src="./assets/logo.jpeg.jpg"
-            alt="Odejia Logo"
-            style="height: 40px; width: auto"
-          />
-        </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Coffee Table - Odejia</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&family=Lato:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="./assets/logo.jpeg.jpg" type="image/x-icon" />
+  <link rel="stylesheet" href="stylesheet/productDetails.css" />
+  <style>
+    /* Minimal custom CSS only for zoom and scroll */
+  </style>
+</head>
 
-        <!-- Desktop links (lg and up) -->
-        <ul
-          class="nav d-none d-lg-flex align-items-center mb-0"
-          style="gap: 1.5rem"
-        >
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-          <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About Us</a>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
+<body>
+  <!-- Navigation -->
+  <nav class="bg-white shadow sticky-top">
+    <div class="container d-flex align-items-center justify-content-between" style="height: 64px">
+      <!-- Brand -->
+      <a href="index.html" class="navbar-brand fw-bold text-brown-primary fs-4 d-flex align-items-center">
+        <img src="./assets/logo.jpeg.jpg" alt="Odejia Logo" style="height: 40px; width: auto" />
+      </a>
 
-        <!-- Icons + mobile toggler (visible below lg) -->
-        <div class="d-flex align-items-center gap-2">
-          <!-- Search icon -->
-          <button class="btn btn-link p-1 icon-button" aria-label="Search">
-            <svg
-              width="20"
-              height="20"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
-          </button>
+      <!-- Desktop links (lg and up) -->
+      <ul class="nav d-none d-lg-flex align-items-center mb-0" style="gap: 1.5rem">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="categories.html">Categories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
 
-          <!-- Wishlist -->
-          <button class="btn btn-link p-1 icon-button" aria-label="Wishlist">
-            <svg
-              width="20"
-              height="20"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-              />
-            </svg>
-          </button>
+      <!-- Icons + mobile toggler (visible below lg) -->
+      <div class="d-flex align-items-center gap-2">
+        <!-- Search icon -->
+        <button class="btn btn-link p-1 icon-button" aria-label="Search">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </button>
 
-          <!-- Cart -->
-          <button
-            class="btn btn-link p-1 icon-button position-relative"
-            aria-label="Cart"
-            style="line-height: 1"
-          >
-            <svg
-              width="20"
-              height="20"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-              />
-            </svg>
-            <span
-              class="badge cart-badge position-absolute top-0 start-100 translate-middle"
-              >0</span
-            >
-          </button>
+        <!-- Wishlist -->
+        <button class="btn btn-link p-1 icon-button" aria-label="Wishlist">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg>
+        </button>
 
-          <!-- Mobile toggler (below lg) -->
-          <button
-            class="btn btn-link p-2 d-lg-none"
-            data-bs-toggle="collapse"
-            data-bs-target="#mobile-menu"
-            aria-controls="mobile-menu"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <svg
-              width="24"
-              height="24"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
+        <!-- Cart -->
+        <button class="btn btn-link p-1 icon-button position-relative" aria-label="Cart" style="line-height: 1">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+          <span class="badge cart-badge position-absolute top-0 start-100 translate-middle">0</span>
+        </button>
+
+        <!-- Mobile toggler (below lg) -->
+        <button class="btn btn-link p-2 d-lg-none" data-bs-toggle="collapse" data-bs-target="#mobile-menu"
+          aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation">
+          <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="collapse d-lg-none bg-white" id="mobile-menu">
+      <ul class="nav flex-column pt-2 pb-3 mb-0">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="categories.html">Categories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">New Arrivals</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Product Section -->
+  <main class="container py-5">
+    <div class="row">
+      <!-- Gallery -->
+      <div class="col-lg-6">
+        <div class="main-image ratio ratio-1x1 mb-4 bg-light rounded-3 overflow-hidden position-relative"
+          onclick="toggleZoom(this)">
+          <img src="./assets/1.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="Modern Coffee Table" />
         </div>
-      </div>
-
-      <!-- Mobile menu -->
-      <div class="collapse d-lg-none bg-white" id="mobile-menu">
-        <ul class="nav flex-column pt-2 pb-3 mb-0">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-          <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">New Arrivals</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About Us</a>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <!-- Product Section -->
-    <main class="container py-5">
-      <div class="row ">
-        <!-- Gallery -->
-        <div class="col-lg-6">
-          <div
-            class="main-image ratio ratio-1x1 mb-4 bg-light rounded-3 overflow-hidden position-relative"
-            onclick="toggleZoom(this)"
-          >
-            <img
-              src="./assets/1.jpg"
-              class="img-fluid w-100 h-100 object-fit-cover"
-              alt="Modern Coffee Table"
-            />
+        <div class="row g-3">
+          <div class="col-3">
+            <div class="ratio ratio-1x1 bg-light rounded-2 overflow-hidden">
+              <img src="./assets/1.jpg" class="img-fluid w-100 h-100 object-fit-cover cursor-pointer" alt="Thumb 1"
+                onclick="changeImage(this.src)" />
+            </div>
           </div>
-          <div class="row g-3">
-            <div class="col-3">
-              <div class="ratio ratio-1x1 bg-light rounded-2 overflow-hidden">
-                <img
-                  src="./assets/1.jpg"
-                  class="img-fluid w-100 h-100 object-fit-cover cursor-pointer"
-                  alt="Thumb 1"
-                  onclick="changeImage(this.src)"
-                />
-              </div>
+          <div class="col-3">
+            <div class="ratio ratio-1x1 bg-light rounded-2 overflow-hidden">
+              <img src="./assets/1.jpg" class="img-fluid w-100 h-100 object-fit-cover cursor-pointer" alt="Thumb 2"
+                onclick="changeImage(this.src)" />
             </div>
-            <div class="col-3">
-              <div class="ratio ratio-1x1 bg-light rounded-2 overflow-hidden">
-                <img
-                  src="./assets/1.jpg"
-                  class="img-fluid w-100 h-100 object-fit-cover cursor-pointer"
-                  alt="Thumb 2"
-                  onclick="changeImage(this.src)"
-                />
-              </div>
+          </div>
+          <div class="col-3">
+            <div class="ratio ratio-1x1 bg-light rounded-2 overflow-hidden">
+              <img src="./assets/1.jpg" class="img-fluid w-100 h-100 object-fit-cover cursor-pointer" alt="Thumb 3"
+                onclick="changeImage(this.src)" />
             </div>
-            <div class="col-3">
-              <div class="ratio ratio-1x1 bg-light rounded-2 overflow-hidden">
-                <img
-                  src="./assets/1.jpg"
-                  class="img-fluid w-100 h-100 object-fit-cover cursor-pointer"
-                  alt="Thumb 3"
-                  onclick="changeImage(this.src)"
-                />
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="ratio ratio-1x1 bg-light rounded-2 overflow-hidden">
-                <img
-                  src="./assets/1.jpg"
-                  class="img-fluid w-100 h-100 object-fit-cover cursor-pointer"
-                  alt="Thumb 4"
-                  onclick="changeImage(this.src)"
-                />
-              </div>
+          </div>
+          <div class="col-3">
+            <div class="ratio ratio-1x1 bg-light rounded-2 overflow-hidden">
+              <img src="./assets/1.jpg" class="img-fluid w-100 h-100 object-fit-cover cursor-pointer" alt="Thumb 4"
+                onclick="changeImage(this.src)" />
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Product Info -->
-        <div class="col-lg-6">
-          <div class="ps-lg-4">
-            <!-- Header -->
+      <!-- Product Info -->
+      <div class="col-lg-6">
+        <div class="ps-lg-4">
+          <!-- Header -->
+          <div class="mb-4">
+            <span class="badge bg-brown-primary mb-2">Bestseller</span>
+            <h1 class="h2 fw-bold text-brown-primary mb-2">
+              Modern Coffee Table
+            </h1>
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="text-warning">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="text-muted">4.8 (128 reviews)</span>
+            </div>
+          </div>
+
+          <!-- Price -->
+          <div class="mb-4">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <h2 class="text-brown-primary fw-bold mb-0">₹12,849.00</h2>
+              <span class="text-muted text-decoration-line-through">₹10,999.00</span>
+              <span class="badge bg-danger">Save 20%</span>
+            </div>
+            <p class="text-success mb-0">
+              <i class="fas fa-truck me-2"></i>Free shipping
+            </p>
+          </div>
+
+          <!-- Description -->
+          <div class="mb-4">
+            <p class="lead">
+              Contemporary design meets functionality with built-in storage
+              and premium solid wood construction.
+            </p>
+          </div>
+
+          <!-- Options -->
+          <div class="mb-4">
+            <h5 class="text-brown-primary mb-3">Customization</h5>
+
+            <!-- Finish -->
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Wood Finish</label>
+              <div class="d-flex gap-2">
+                <button class="btn btn-outline-brown-primary btn-sm active">
+                  Natural
+                </button>
+                <button class="btn btn-outline-brown-primary btn-sm">
+                  Walnut
+                </button>
+                <button class="btn btn-outline-brown-primary btn-sm">
+                  Ebony
+                </button>
+              </div>
+            </div>
+
+            <!-- Size -->
             <div class="mb-4">
-              <span class="badge bg-brown-primary mb-2">Bestseller</span>
-              <h1 class="h2 fw-bold text-brown-primary mb-2">
-                Modern Coffee Table
-              </h1>
-              <div class="d-flex align-items-center gap-3 mb-3">
-                <div class="text-warning">
+              <label class="form-label fw-semibold">Size</label>
+              <select class="form-select w-auto">
+                <option>Standard (48" x 24")</option>
+                <option>Large (60" x 30")</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Add to Cart -->
+          <div class="mb-4">
+            <div class="row g-3 align-items-center">
+              <div class="col-auto">
+                <label class="form-label fw-semibold">Qty</label>
+                <div class="input-group" style="width: 120px">
+                  <button class="btn btn-outline-brown-primary">-</button>
+                  <input type="text" class="form-control text-center" value="1" />
+                  <button class="btn btn-outline-brown-primary">+</button>
+                </div>
+              </div>
+              <div class="col">
+                <button class="btn btn-brown-primary w-100 py-3 fw-semibold">
+                  <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                </button>
+                <a href="checkout.html" class="btn btn-primary btn-sm">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Features -->
+          <div class="border-top pt-3">
+            <div class="row text-center">
+              <div class="col-4">
+                <i class="fas fa-truck text-brown-primary mb-2"></i>
+                <p class="small mb-0">Free Shipping</p>
+              </div>
+              <div class="col-4">
+                <i class="fas fa-shield-alt text-brown-primary mb-2"></i>
+                <p class="small mb-0">Lifetime Warranty</p>
+              </div>
+              <div class="col-4">
+                <i class="fas fa-undo text-brown-primary mb-2"></i>
+                <p class="small mb-0">30-Day Returns</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Details Tabs -->
+    <div class="row mt-5">
+      <div class="col-12">
+        <ul class="nav nav-tabs border-0" id="productTabs">
+          <li class="nav-item">
+            <button class="nav-link active text-brown-primary fw-semibold" data-bs-toggle="tab"
+              data-bs-target="#description">
+              Description
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link text-brown-primary fw-semibold" data-bs-toggle="tab" data-bs-target="#specs">
+              Specifications
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link text-brown-primary fw-semibold" data-bs-toggle="tab" data-bs-target="#reviews">
+              Reviews
+            </button>
+          </li>
+        </ul>
+
+        <div class="tab-content mt-3">
+          <!-- Description -->
+          <div class="tab-pane fade show active" id="description">
+            <div class="row">
+              <div class="col-md-6">
+                <h5 class="text-brown-primary mb-3">Product Details</h5>
+                <p>
+                  Handcrafted from sustainably sourced Sheesham wood, this
+                  coffee table combines modern design with traditional
+                  craftsmanship.
+                </p>
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <i class="fas fa-check text-brown-primary me-2"></i>Solid
+                    wood construction
+                  </li>
+                  <li class="mb-2">
+                    <i class="fas fa-check text-brown-primary me-2"></i>Hidden
+                    storage compartment
+                  </li>
+                  <li class="mb-2">
+                    <i class="fas fa-check text-brown-primary me-2"></i>Natural oil finish
+                  </li>
+                  <li>
+                    <i class="fas fa-check text-brown-primary me-2"></i>Easy
+                    assembly
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <div class="ratio ratio-16x9">
+                  <img src="./assets/1.jpg" class="img-fluid rounded-3 object-fit-cover" alt="Detail" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Specifications -->
+          <div class="tab-pane fade" id="specs">
+            <div class="row">
+              <div class="col-md-6">
+                <table class="table">
+                  <tr>
+                    <th class="text-brown-primary">Material</th>
+                    <td>Solid Sheesham Wood</td>
+                  </tr>
+                  <tr>
+                    <th class="text-brown-primary">Dimensions</th>
+                    <td>48" L x 24" W x 18" H</td>
+                  </tr>
+                  <tr>
+                    <th class="text-brown-primary">Weight</th>
+                    <td>45 lbs</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="col-md-6">
+                <table class="table">
+                  <tr>
+                    <th class="text-brown-primary">Finish</th>
+                    <td>Natural Oil</td>
+                  </tr>
+                  <tr>
+                    <th class="text-brown-primary">Assembly</th>
+                    <td>Required (30 min)</td>
+                  </tr>
+                  <tr>
+                    <th class="text-brown-primary">Warranty</th>
+                    <td>Lifetime</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reviews -->
+          <div class="tab-pane fade" id="reviews">
+            <div class="row">
+              <div class="col-md-4 text-center mb-4">
+                <div class="display-4 fw-bold text-brown-primary">4.8</div>
+                <div class="text-warning mb-2">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star-half-alt"></i>
                 </div>
-                <span class="text-muted">4.8 (128 reviews)</span>
+                <p class="text-muted">128 reviews</p>
               </div>
-            </div>
-
-            <!-- Price -->
-            <div class="mb-4">
-              <div class="d-flex align-items-center gap-3 mb-2">
-                <h2 class="text-brown-primary fw-bold mb-0">₹12,849.00</h2>
-                <span class="text-muted text-decoration-line-through"
-                  >₹10,999.00</span
-                >
-                <span class="badge bg-danger">Save 20%</span>
-              </div>
-              <p class="text-success mb-0">
-                <i class="fas fa-truck me-2"></i>Free shipping
-              </p>
-            </div>
-
-            <!-- Description -->
-            <div class="mb-4">
-              <p class="lead">
-                Contemporary design meets functionality with built-in storage
-                and premium solid wood construction.
-              </p>
-            </div>
-
-            <!-- Options -->
-            <div class="mb-4">
-              <h5 class="text-brown-primary mb-3">Customization</h5>
-
-              <!-- Finish -->
-              <div class="mb-3">
-                <label class="form-label fw-semibold">Wood Finish</label>
-                <div class="d-flex gap-2">
-                  <button class="btn btn-outline-brown-primary btn-sm active">
-                    Natural
-                  </button>
-                  <button class="btn btn-outline-brown-primary btn-sm">
-                    Walnut
-                  </button>
-                  <button class="btn btn-outline-brown-primary btn-sm">
-                    Ebony
-                  </button>
-                </div>
-              </div>
-
-              <!-- Size -->
-              <div class="mb-4">
-                <label class="form-label fw-semibold">Size</label>
-                <select class="form-select w-auto">
-                  <option>Standard (48" x 24")</option>
-                  <option>Large (60" x 30")</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- Add to Cart -->
-            <div class="mb-4">
-              <div class="row g-3 align-items-center">
-                <div class="col-auto">
-                  <label class="form-label fw-semibold">Qty</label>
-                  <div class="input-group" style="width: 120px">
-                    <button class="btn btn-outline-brown-primary">-</button>
-                    <input
-                      type="text"
-                      class="form-control text-center"
-                      value="1"
-                    />
-                    <button class="btn btn-outline-brown-primary">+</button>
+              <div class="col-md-8">
+                <div class="border-start border-brown ps-3 mb-4">
+                  <div class="d-flex justify-content-between mb-2">
+                    <h6 class="text-brown-primary mb-0">Sarah Johnson</h6>
+                    <small class="text-muted">2 weeks ago</small>
                   </div>
-                </div>
-                <div class="col">
-                  <button class="btn btn-brown-primary w-100 py-3 fw-semibold">
-                    <i class="fas fa-shopping-cart me-2"></i>Add to Cart
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Features -->
-            <div class="border-top pt-3">
-              <div class="row text-center">
-                <div class="col-4">
-                  <i class="fas fa-truck text-brown-primary mb-2"></i>
-                  <p class="small mb-0">Free Shipping</p>
-                </div>
-                <div class="col-4">
-                  <i class="fas fa-shield-alt text-brown-primary mb-2"></i>
-                  <p class="small mb-0">Lifetime Warranty</p>
-                </div>
-                <div class="col-4">
-                  <i class="fas fa-undo text-brown-primary mb-2"></i>
-                  <p class="small mb-0">30-Day Returns</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Details Tabs -->
-      <div class="row mt-5">
-        <div class="col-12">
-          <ul class="nav nav-tabs border-0" id="productTabs">
-            <li class="nav-item">
-              <button
-                class="nav-link active text-brown-primary fw-semibold"
-                data-bs-toggle="tab"
-                data-bs-target="#description"
-              >
-                Description
-              </button>
-            </li>
-            <li class="nav-item">
-              <button
-                class="nav-link text-brown-primary fw-semibold"
-                data-bs-toggle="tab"
-                data-bs-target="#specs"
-              >
-                Specifications
-              </button>
-            </li>
-            <li class="nav-item">
-              <button
-                class="nav-link text-brown-primary fw-semibold"
-                data-bs-toggle="tab"
-                data-bs-target="#reviews"
-              >
-                Reviews
-              </button>
-            </li>
-          </ul>
-
-          <div class="tab-content mt-3">
-            <!-- Description -->
-            <div class="tab-pane fade show active" id="description">
-              <div class="row">
-                <div class="col-md-6">
-                  <h5 class="text-brown-primary mb-3">Product Details</h5>
-                  <p>
-                    Handcrafted from sustainably sourced Sheesham wood, this
-                    coffee table combines modern design with traditional
-                    craftsmanship.
+                  <div class="text-warning small mb-2">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <p class="mb-0">
+                    "Exceptional quality and beautiful craftsmanship. The
+                    perfect centerpiece for our living room."
                   </p>
-                  <ul class="list-unstyled">
-                    <li class="mb-2">
-                      <i class="fas fa-check text-brown-primary me-2"></i>Solid
-                      wood construction
-                    </li>
-                    <li class="mb-2">
-                      <i class="fas fa-check text-brown-primary me-2"></i>Hidden
-                      storage compartment
-                    </li>
-                    <li class="mb-2">
-                      <i class="fas fa-check text-brown-primary me-2"></i
-                      >Natural oil finish
-                    </li>
-                    <li>
-                      <i class="fas fa-check text-brown-primary me-2"></i>Easy
-                      assembly
-                    </li>
-                  </ul>
                 </div>
-                <div class="col-md-6">
-                  <div class="ratio ratio-16x9">
-                    <img
-                      src="./assets/1.jpg"
-                      class="img-fluid rounded-3 object-fit-cover"
-                      alt="Detail"
-                    />
+                <div class="border-start border-brown ps-3">
+                  <div class="d-flex justify-content-between mb-2">
+                    <h6 class="text-brown-primary mb-0">Mike Chen</h6>
+                    <small class="text-muted">1 month ago</small>
                   </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Specifications -->
-            <div class="tab-pane fade" id="specs">
-              <div class="row">
-                <div class="col-md-6">
-                  <table class="table">
-                    <tr>
-                      <th class="text-brown-primary">Material</th>
-                      <td>Solid Sheesham Wood</td>
-                    </tr>
-                    <tr>
-                      <th class="text-brown-primary">Dimensions</th>
-                      <td>48" L x 24" W x 18" H</td>
-                    </tr>
-                    <tr>
-                      <th class="text-brown-primary">Weight</th>
-                      <td>45 lbs</td>
-                    </tr>
-                  </table>
-                </div>
-                <div class="col-md-6">
-                  <table class="table">
-                    <tr>
-                      <th class="text-brown-primary">Finish</th>
-                      <td>Natural Oil</td>
-                    </tr>
-                    <tr>
-                      <th class="text-brown-primary">Assembly</th>
-                      <td>Required (30 min)</td>
-                    </tr>
-                    <tr>
-                      <th class="text-brown-primary">Warranty</th>
-                      <td>Lifetime</td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-            </div>
-
-            <!-- Reviews -->
-            <div class="tab-pane fade" id="reviews">
-              <div class="row">
-                <div class="col-md-4 text-center mb-4">
-                  <div class="display-4 fw-bold text-brown-primary">4.8</div>
-                  <div class="text-warning mb-2">
+                  <div class="text-warning small mb-2">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                   </div>
-                  <p class="text-muted">128 reviews</p>
-                </div>
-                <div class="col-md-8">
-                  <div class="border-start border-brown ps-3 mb-4">
-                    <div class="d-flex justify-content-between mb-2">
-                      <h6 class="text-brown-primary mb-0">Sarah Johnson</h6>
-                      <small class="text-muted">2 weeks ago</small>
-                    </div>
-                    <div class="text-warning small mb-2">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                    </div>
-                    <p class="mb-0">
-                      "Exceptional quality and beautiful craftsmanship. The
-                      perfect centerpiece for our living room."
-                    </p>
-                  </div>
-                  <div class="border-start border-brown ps-3">
-                    <div class="d-flex justify-content-between mb-2">
-                      <h6 class="text-brown-primary mb-0">Mike Chen</h6>
-                      <small class="text-muted">1 month ago</small>
-                    </div>
-                    <div class="text-warning small mb-2">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <p class="mb-0">
-                      "Great design and solid construction. Assembly was
-                      straightforward and the finish is perfect."
-                    </p>
-                  </div>
+                  <p class="mb-0">
+                    "Great design and solid construction. Assembly was
+                    straightforward and the finish is perfect."
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Related Products -->
-      <section id="related-products" class="py-5 bg-white">
-        <div class="container">
-          <!-- Section Heading -->
-          <div class="text-center mb-5">
-            <h3 class="fw-bold mb-3">You May Also Like</h3>
-          </div>
-
-          <!-- Product Cards - Responsive Grid -->
-          <div class="related-products-grid">
-            <div class="row g-3 g-md-4">
-              <!-- Product Card 1 -->
-              <div class="col-6 col-md-4 col-lg-3">
-                <div class="related-card h-100">
-                  <a
-                    href="productDetails.html"
-                    class="related-card-link text-decoration-none"
-                  >
-                    <div class="related-img-container">
-                      <img
-                        src="./assets/1.jpg"
-                        alt="Modern Coffee Table"
-                        class="related-card-image"
-                      />
-                    </div>
-                    <div class="related-card-body">
-                      <div
-                        class="d-flex justify-content-between align-items-center mb-2"
-                      >
-                        <span class="badge related-badge">Trending</span>
-                      </div>
-                      <h3 class="related-card-title">Modern Coffee Table</h3>
-                      <p class="related-card-text">
-                        Contemporary design with storage
-                      </p>
-                    </div>
-                  </a>
-                  <div class="related-card-footer">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <span class="related-price">$849</span>
-                      <button class="related-cart-btn">Add to Cart</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Product Card 2 -->
-              <div class="col-6 col-md-4 col-lg-3">
-                <div class="related-card h-100">
-                  <a
-                    href="productDetails.html"
-                    class="related-card-link text-decoration-none"
-                  >
-                    <div class="related-img-container">
-                      <img
-                        src="./assets/1.jpg"
-                        alt="Luxury Sofa"
-                        class="related-card-image"
-                      />
-                    </div>
-                    <div class="related-card-body">
-                      <div
-                        class="d-flex justify-content-between align-items-center mb-2"
-                      >
-                        <span class="badge related-badge">Trending</span>
-                      </div>
-                      <h3 class="related-card-title">Luxury Sofa</h3>
-                      <p class="related-card-text">
-                        Elegant comfort for your living room
-                      </p>
-                    </div>
-                  </a>
-                  <div class="related-card-footer">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <span class="related-price">$1,299</span>
-                      <button class="related-cart-btn">Add to Cart</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Product Card 3 -->
-              <div class="col-6 col-md-4 col-lg-3">
-                <div class="related-card h-100">
-                  <a
-                    href="productDetails.html"
-                    class="related-card-link text-decoration-none"
-                  >
-                    <div class="related-img-container">
-                      <img
-                        src="./assets/1.jpg"
-                        alt="Classic Wooden Chair"
-                        class="related-card-image"
-                      />
-                    </div>
-                    <div class="related-card-body">
-                      <div
-                        class="d-flex justify-content-between align-items-center mb-2"
-                      >
-                        <span class="badge related-badge">Trending</span>
-                      </div>
-                      <h3 class="related-card-title">Classic Wooden Chair</h3>
-                      <p class="related-card-text">
-                        Premium handcrafted wooden design
-                      </p>
-                    </div>
-                  </a>
-                  <div class="related-card-footer">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <span class="related-price">$499</span>
-                      <button class="related-cart-btn">Add to Cart</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Product Card 4 -->
-              <div class="col-6 col-md-4 col-lg-3">
-                <div class="related-card h-100">
-                  <a
-                    href="productDetails.html"
-                    class="related-card-link text-decoration-none"
-                  >
-                    <div class="related-img-container">
-                      <img
-                        src="./assets/1.jpg"
-                        alt="Elegant Bookshelf"
-                        class="related-card-image"
-                      />
-                    </div>
-                    <div class="related-card-body">
-                      <div
-                        class="d-flex justify-content-between align-items-center mb-2"
-                      >
-                        <span class="badge related-badge">Trending</span>
-                      </div>
-                      <h3 class="related-card-title">Elegant Bookshelf</h3>
-                      <p class="related-card-text">
-                        Stylish storage for your favorite reads
-                      </p>
-                    </div>
-                  </a>
-                  <div class="related-card-footer">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <span class="related-price">$699</span>
-                      <button class="related-cart-btn">Add to Cart</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white pt-5 pb-4">
+    <!-- Related Products -->
+    <section id="related-products" class="py-5 bg-white">
       <div class="container">
-        <div class="row">
-          <!-- Company Info -->
-          <div class="col-md-4 mb-4">
-            <h5 class="text-brown-primary">Odejia</h5>
-            <p class="text-white-50">
-              Premium handcrafted wooden furniture and home decor. Bringing
-              tradition and modern design together.
-            </p>
-          </div>
-
-          <!-- Quick Links -->
-          <div class="col-md-4 mb-4">
-            <h5 class="text-brown-primary">Quick Links</h5>
-            <ul class="list-unstyled">
-              <li>
-                <a href="#" class="text-white-50 text-decoration-none"
-                  >Craftsmanship</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-white-50 text-decoration-none"
-                  >Design Tips</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-white-50 text-decoration-none"
-                  >Gallery</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-white-50 text-decoration-none"
-                  >Contact Us</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!-- Contact Info -->
-          <div class="col-md-4 mb-4">
-            <h5 class="text-brown-primary">Contact Us</h5>
-            <p class="text-white-50 mb-1">
-              📍 123, Heritage Street, Jaipur, India
-            </p>
-            <p class="text-white-50 mb-1">📞 +91 98765 43210</p>
-            <p class="text-white-50 mb-1">✉️ info@odejia.com</p>
-            <div class="mt-2">
-              <a href="#" class="text-white me-3"
-                ><i class="bi bi-facebook"></i
-              ></a>
-              <a href="#" class="text-white me-3"
-                ><i class="bi bi-twitter"></i
-              ></a>
-              <a href="#" class="text-white me-3"
-                ><i class="bi bi-instagram"></i
-              ></a>
-              <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
+        <!-- Section Heading -->
+        <div class="text-center mb-5">
+          <h3 class="fw-bold mb-3">You May Also Like</h3>
         </div>
 
-        <hr class="border-light" />
+        <!-- Product Cards - Responsive Grid -->
+        <div class="related-products-grid">
+          <div class="row g-3 g-md-4">
+            <!-- Product Card 1 -->
+            <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+              <a href="product-details.html" class="text-decoration-none d-block h-100">
+                <div class="custom-product-card h-90">
+                  <div class="card-img-wrap">
+                    <img src="./assets/1.jpg" alt="Minimal Bookshelf" class="card-img-top" />
+                  </div>
+                  <div class="p-4">
+                    <h3 class="card-title mb-2">Minimal Bookshelf</h3>
+                    <p class="card-desc mb-4">
+                      Sleek design for modern interiors
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="price-tag">$699</span>
+                      <button type="button" class="btn-custom" onclick="event.stopPropagation()">
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Product Card 2 -->
+            <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+              <a href="product-details.html" class="text-decoration-none d-block h-100">
+                <div class="custom-product-card h-90">
+                  <div class="card-img-wrap">
+                    <img src="./assets/1.jpg" alt="Minimal Bookshelf" class="card-img-top" />
+                  </div>
+                  <div class="p-4">
+                    <h3 class="card-title mb-2">Minimal Bookshelf</h3>
+                    <p class="card-desc mb-4">
+                      Sleek design for modern interiors
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="price-tag">$699</span>
+                      <button type="button" class="btn-custom" onclick="event.stopPropagation()">
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Product Card 3 -->
+            <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+              <a href="product-details.html" class="text-decoration-none d-block h-100">
+                <div class="custom-product-card h-90">
+                  <div class="card-img-wrap">
+                    <img src="./assets/1.jpg" alt="Minimal Bookshelf" class="card-img-top" />
+                  </div>
+                  <div class="p-4">
+                    <h3 class="card-title mb-2">Minimal Bookshelf</h3>
+                    <p class="card-desc mb-4">
+                      Sleek design for modern interiors
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="price-tag">$699</span>
+                      <button type="button" class="btn-custom" onclick="event.stopPropagation()">
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Product Card 4 -->
+            <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+              <a href="product-details.html" class="text-decoration-none d-block h-100">
+                <div class="custom-product-card h-90">
+                  <div class="card-img-wrap">
+                    <img src="./assets/1.jpg" alt="Minimal Bookshelf" class="card-img-top" />
+                  </div>
+                  <div class="p-4">
+                    <h3 class="card-title mb-2">Minimal Bookshelf</h3>
+                    <p class="card-desc mb-4">
+                      Sleek design for modern interiors
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="price-tag">$699</span>
+                      <button type="button" class="btn-custom" onclick="event.stopPropagation()">
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+    </section>
+  </main>
 
-        <div class="text-center pt-3">
-          <p class="text-white-50 mb-0">
-            &copy; 2025 Odejia. All rights reserved.
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container">
+      <div class="row">
+        <!-- Company Info -->
+        <div class="col-md-4 mb-4">
+          <h5 class="text-brown-primary">Odejia</h5>
+          <p class="text-white-50">
+            Premium handcrafted wooden furniture and home decor. Bringing
+            tradition and modern design together.
           </p>
         </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-4 mb-4">
+          <h5 class="text-brown-primary">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="text-white-50 text-decoration-none">Craftsmanship</a>
+            </li>
+            <li>
+              <a href="#" class="text-white-50 text-decoration-none">Design Tips</a>
+            </li>
+            <li>
+              <a href="#" class="text-white-50 text-decoration-none">Gallery</a>
+            </li>
+            <li>
+              <a href="#" class="text-white-50 text-decoration-none">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-md-4 mb-4">
+          <h5 class="text-brown-primary">Contact Us</h5>
+          <p class="text-white-50 mb-1">
+            📍 123, Heritage Street, Jaipur, India
+          </p>
+          <p class="text-white-50 mb-1">📞 +91 98765 43210</p>
+          <p class="text-white-50 mb-1">✉️ info@odejia.com</p>
+          <div class="mt-2">
+            <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
       </div>
-    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      // Image Zoom Functionality
-      function toggleZoom(element) {
-        element.classList.toggle("zoomed");
-      }
+      <hr class="border-light" />
 
-      // Change main image when thumbnail clicked
-      function changeImage(src) {
-        const mainImg = document.querySelector(".main-image img");
-        mainImg.src = src;
-      }
+      <div class="text-center pt-3">
+        <p class="text-white-50 mb-0">
+          &copy; 2025 Odejia. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
 
-      // Simple interactivity
-      document.addEventListener("DOMContentLoaded", function () {
-        // Option buttons
-        document
-          .querySelectorAll(".btn-outline-brown-primary")
-          .forEach((btn) => {
-            btn.addEventListener("click", function () {
-              if (this.closest(".d-flex")) {
-                this.closest(".d-flex")
-                  .querySelectorAll(".btn")
-                  .forEach((b) => {
-                    b.classList.remove("active");
-                  });
-                this.classList.add("active");
-              }
-            });
-          });
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Image Zoom Functionality
+    function toggleZoom(element) {
+      element.classList.toggle("zoomed");
+    }
 
-        // Quantity controls
-        const qtyInput = document.querySelector('input[type="text"]');
-        document.querySelectorAll(".input-group .btn").forEach((btn) => {
+    // Change main image when thumbnail clicked
+    function changeImage(src) {
+      const mainImg = document.querySelector(".main-image img");
+      mainImg.src = src;
+    }
+
+    // Simple interactivity
+    document.addEventListener("DOMContentLoaded", function () {
+      // Option buttons
+      document
+        .querySelectorAll(".btn-outline-brown-primary")
+        .forEach((btn) => {
           btn.addEventListener("click", function () {
-            let value = parseInt(qtyInput.value);
-            if (this.textContent === "+") {
-              qtyInput.value = value + 1;
-            } else if (this.textContent === "-" && value > 1) {
-              qtyInput.value = value - 1;
+            if (this.closest(".d-flex")) {
+              this.closest(".d-flex")
+                .querySelectorAll(".btn")
+                .forEach((b) => {
+                  b.classList.remove("active");
+                });
+              this.classList.add("active");
             }
           });
         });
+
+      // Quantity controls
+      const qtyInput = document.querySelector('input[type="text"]');
+      document.querySelectorAll(".input-group .btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          let value = parseInt(qtyInput.value);
+          if (this.textContent === "+") {
+            qtyInput.value = value + 1;
+          } else if (this.textContent === "-" && value > 1) {
+            qtyInput.value = value - 1;
+          }
+        });
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>

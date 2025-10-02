@@ -2,7 +2,7 @@
    Root Variables
 ================================= */
 :root {
-  --brown-primary: #78350f;
+  --brown-primary: #ff912f;
   --brown-light: #92400e;
   --brown-dark: #5c280b;
   --brown-bg-light: #fff4e6;
@@ -31,6 +31,7 @@ body, p, li, span, a, div {
 .text-brown-light   { color: var(--brown-light) !important; }
 .text-brown-dark    { color: var(--brown-dark) !important; }
 .bg-brown-light     { background-color: var(--brown-bg-light) !important; }
+.bg-brown-dark     { background-color: var(--brown-dark) !important; }
 
 /* ===============================
    Buttons
@@ -47,12 +48,14 @@ body, p, li, span, a, div {
 }
 
 .btn-outline-brown-primary {
-  border-color: var(--brown-primary);
+  /* border-color: var(--brown-primary); */
+  border-color:orange;
   color: var(--brown-primary);
 }
 
 .btn-outline-brown-primary:hover {
-  background-color: var(--brown-primary);
+  /* background-color: var(--brown-primary); */
+    border-color: var(--brown-primary);
   color: white;
 }
 
